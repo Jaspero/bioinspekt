@@ -1,5 +1,5 @@
 import admin from 'firebase-admin';
-import {join} from 'path';
+import * as key from '../../key.json';
 
 let environment: any;
 
@@ -9,7 +9,7 @@ if (environment === 'd') {
 	};
 } else {
 	environment = {
-		credential: admin.credential.cert(join(process.cwd(), 'key.json')),
+		credential: admin.credential.cert(key as admin.ServiceAccount),
 		databaseURL: `https://jp-bioinspekt.firebaseio.com`
 	};
 }

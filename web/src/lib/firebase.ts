@@ -22,7 +22,7 @@ export async function getPage(id: string, collection = 'pages') {
 	const {blocks, meta, title, globalStyles} = page;
 	const scripts: string[] = [];
 	
-	let content = blocks.reduce((acc: string, cur: any) => {
+	let content = (blocks || []).reduce((acc: string, cur: any) => {
 
 		const {compiled = ''} = cur;
 

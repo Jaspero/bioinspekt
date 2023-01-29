@@ -2,7 +2,7 @@
   import {BASE_TITLE, DELIMITER, URL} from '$lib/consts/title.const.ts';
   import {browser} from '$app/environment';
 
-  export let page: any;
+  export let page: any = {};
 
   $: title = ( page.meta?.title || page.title) + (BASE_TITLE ? ` ${DELIMITER} ${BASE_TITLE}` : '');
 
