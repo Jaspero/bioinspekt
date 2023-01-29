@@ -48,7 +48,7 @@ export default (() => {
 				});
 	
 				fetch(
-					`https://firestore.googleapis.com/v1/projects/jaspero-jms/databases/(default)/documents/${this.collection}`,
+					`https://firestore.googleapis.com/v1/projects/jp-bioinspekt/databases/(default)/documents/${this.collection}`,
 					{
 						method: 'POST',
 						body: JSON.stringify({fields})

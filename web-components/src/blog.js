@@ -46,7 +46,7 @@ export default (() => {
 
 		async getData() {
 			let res = await fetch(
-				`https://firestore.googleapis.com/v1/projects/jaspero-jms/databases/(default)/documents:runQuery`,
+				`https://firestore.googleapis.com/v1/projects/jp-bioinspekt/databases/(default)/documents:runQuery`,
 				{
 					method: 'POST',
 					body: JSON.stringify({

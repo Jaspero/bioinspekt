@@ -12,8 +12,8 @@ export const SHARED_CONFIG: {
 		organization: 'Jaspero',
 		repository: 'jms',
 	},
-	projectId: 'jaspero-jms',
-	cloudRegion: 'us-central1',
-	webUrl: 'https://jaspero-jms.web.app',
+	projectId: 'jp-bioinspekt',
+	cloudRegion: 'europe-west1',
+	webUrl: 'https://jp-bioinspekt.web.app',
 	adminEmail: 'info@jaspero.co'
 };

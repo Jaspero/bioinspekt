@@ -5,12 +5,12 @@ let environment: any;
 
 if (environment === 'd') {
 	environment = {
-		projectId: 'jaspero-jms'
+		projectId: 'jp-bioinspekt'
 	};
 } else {
 	environment = {
 		credential: admin.credential.cert(join(process.cwd(), 'key.json')),
-		databaseURL: `https://jaspero-jms.firebaseio.com`
+		databaseURL: `https://jp-bioinspekt.firebaseio.com`
 	};
 }
 

@@ -12,7 +12,7 @@ export interface CtaOptions extends BlockDataOptions {
   module: ['automatic-emails'],
   previewValue: {
     label: `Link`,
-    link: `https://jaspero-jms.web.app`
+    link: `https://jp-bioinspekt.web.app`
   },
   form: {
     schema: {

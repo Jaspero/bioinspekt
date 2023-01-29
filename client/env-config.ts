@@ -3,12 +3,12 @@
  */
 export const ENV_CONFIG = {
   firebase: {
-    apiKey: 'AIzaSyBpOVW-c-ExPTUHRAXRO8-yTUVPq0pKS1g',
-    authDomain: 'jaspero-jms.firebaseapp.com',
-    databaseURL: 'https://jaspero-jms.firebaseio.com',
-    projectId: 'jaspero-jms',
-    storageBucket: 'jaspero-jms.appspot.com',
-    messagingSenderId: '82190793734',
-    appId: '1:82190793734:web:e6abf3c3a3bbb744'
+    apiKey: 'AIzaSyA6Wx0pCOVlxyP3zWXGPHGqO9hTuwWTl30',
+    authDomain: 'jp-bioinspekt.firebaseapp.com',
+    projectId: 'jp-bioinspekt',
+    storageBucket: 'jp-bioinspekt.appspot.com',
+    messagingSenderId: '278358849621',
+    appId: '1:278358849621:web:659f806fac2dfb6726fcdc',
+    measurementId: 'G-MNQJGLQSQ3'
   }
 };

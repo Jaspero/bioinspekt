@@ -1,17 +1,17 @@
 {
   "targets": {
-    "jaspero-jms": {
+    "jp-bioinspekt": {
       "hosting": {
         "cms": [
-          "jaspero-jms"
+          "jp-bioinspekt"
         ],
         "web": [
-          "jaspero-jms-web"
+          "jp-bioinspekt-web"
         ]
       }
     }
   },
   "projects": {
-    "default": "jaspero-jms"
+    "default": "jp-bioinspekt"
   }
 }
