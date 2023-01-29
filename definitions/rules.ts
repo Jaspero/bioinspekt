@@ -169,5 +169,10 @@ export async function compileRules() {
 
 	const final = RULES_BASE.replace('[[R]]', source.join('\n'));
 
-	await securityRules().releaseFirestoreRulesetFromSource(final);
+	try {
+		await securityRules().releaseFirestoreRulesetFromSource(final);
+	} catch (e) {
+		console.error(e);
+		console.log(final);
+	}
 }
