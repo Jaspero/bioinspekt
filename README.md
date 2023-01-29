@@ -1,4 +1,4 @@
-![Release](https://github.com/Jaspero/bioinspekt/workflows/Release/badge.svg)
+![Deploy Web](https://github.com/Jaspero/bioinspekt/workflows/Deploy%20Web/badge.svg)
 ![Deploy CMS](https://github.com/Jaspero/bioinspekt/workflows/Deploy%20CMS/badge.svg)
 ![Deploy Functions](https://github.com/Jaspero/bioinspekt/workflows/Deploy%20Functions/badge.svg)
 ![Deploy Firestore Indexes](https://github.com/Jaspero/bioinspekt/workflows/Deploy%20Firestore%20Indexes/badge.svg)
