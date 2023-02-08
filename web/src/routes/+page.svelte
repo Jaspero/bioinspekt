@@ -1,8 +1,6 @@
 <script lang="ts">
-	import Page from '$lib/Page.svelte';
-	import type { PageData } from './$types';
 
-	export let page: PageData;
+import Hero from '../lib/Hero.svelte';
 </script>
 
-<Page {page} />
+<Hero></Hero>

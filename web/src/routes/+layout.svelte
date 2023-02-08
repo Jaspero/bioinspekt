@@ -14,9 +14,9 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import type { LayoutData } from './$types';
-	import Header from '$lib/header/Header.svelte';
-	import '../app.scss';
-	
+	import Header from '$lib/Header.svelte';
+  import './styles.css';
+
 	export let data: LayoutData;
 
 	$: mainClass = $page.url.pathname.slice(1) ? $page.url.pathname.slice(1) : 'home';
@@ -28,4 +28,8 @@
 	<slot />
 </main>
 
-<style></style>
+<style>
+  main {
+    padding-top: 94px;
+  }
+</style>
