@@ -30,8 +30,17 @@
 }
 
 :root {
+  /* Primary colors */
   --primary: #677237;
   --primary-c: #FFFFFF;
+  --primary-l: #C2C896;
+  --primary-l-c: #000000;
+
+  /* Accent colors */
+  --accent: #A9A74F;
+
+
+  --bg: #ECF3E2
 }
 
 *,
@@ -46,11 +55,8 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
-html.overflow-enabled {
-  overflow-x: unset;
-}
+
 @media (max-width: 1280px) {
   html {
     font-size: 14px;
@@ -65,8 +71,6 @@ html.overflow-enabled {
 body {
   min-height: 100vh;
   margin: 0;
-  background-color: var(--bg);
-  color: var(--text);
   font-family: 'Sen', sans-serif;
   font-weight: 400;
   overflow-x: hidden;

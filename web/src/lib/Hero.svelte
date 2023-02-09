@@ -5,8 +5,7 @@
 <style lang="scss">
   .hero {
     position: relative;
-    min-height: 100vh;
-    margin-top: -94px;
+    min-height: calc(100vh - 18rem);
 
     &::after {
       content: '';
