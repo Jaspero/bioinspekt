@@ -199,16 +199,10 @@ a {
   }
 }
 
-.c-default {
-  color: var(--text);
-}
-.c-default-l {
-  color: var(--text-lighter);
-}
 .c-primary {
   color: var(--primary);
 }
-.c-primary-c {
+.primary-c {
   color: var(--primary-c);
 }
 .c-accent {

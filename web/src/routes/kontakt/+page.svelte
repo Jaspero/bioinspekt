@@ -3,6 +3,58 @@
   import Banner from '../../lib/Banner.svelte';
   import Text from '../../lib/Text.svelte';
   import Margin from '../../lib/Margin.svelte';
+
+  const data = {
+    name: '',
+    email: '',
+    message: ''
+  };
+
+  let loading = false;
+  let submitted = false;
+  let error = false;
+
+  async function submit() {
+    if (loading) {
+      return;
+    }
+
+    loading = true;
+
+    const fields = {
+      createdOn: {
+        integerValue: Date.now().toString()
+      },
+      name: {
+        stringValue: data.name
+      },
+      email: {
+        stringValue: data.email
+      },
+      message: {
+        stringValue: data.message
+      },
+      status: {
+        stringValue: 'received'
+      }
+    };
+
+    try {
+      await fetch(`https://firestore.googleapis.com/v1/projects/bioinspekt/databases/(default)/documents/contacts`, {
+        method: 'POST',
+        body: JSON.stringify({fields})
+      });
+
+      submitted = true;
+      data.name = '';
+      data.email = '';
+      data.message = '';
+    } catch (e) {
+      error = true;
+    }
+
+    loading = false;
+  }
 </script>
 
 <Banner>
@@ -134,6 +186,36 @@
         info.bioinspekt@gmail.com
       </a>
     </Card>
+
+    <Margin size="2" />
+
+    <Card>
+      <form class="contact-form m-t-l" on:submit|preventDefault={submit}>
+        <label for="name" class="field">
+          <input id="name" class="input-field" placeholder="Vaše ime" name="name" bind:value={data.name} required />
+          <span class="label">Vaše ime</span>
+        </label>
+        <label for="mail" class="field">
+          <input id="mail" class="input-field" placeholder="Vaš e-mail" name="email" type="email" bind:value={data.email} required />
+          <span class="label">Vaš e-mail</span>
+        </label>
+        <label for="message" class="field">
+          <textarea id="message" class="input-field" placeholder="Vaša poruka" name="message" rows="10" bind:value={data.message} required ></textarea>
+          <span class="label">Vaša poruka</span>
+        </label>
+        <div class="m-t-m">
+          <button type="submit" {loading}>Pošalji</button>
+        </div>
+
+        {#if submitted}
+          <p class="m-t-s">Vaša poruka je uspješno zaprimljena. Hvala vam na javljanju. Odgovoriti ćemo vam u najkraćemo mogućem roku.</p>
+        {/if}
+
+        {#if error}
+          <p class="m-t-s">Došlo je do greške. Molim vas probajte ponovno.</p>
+        {/if}
+      </form>
+    </Card>
   </div>
 </div>
 
@@ -141,6 +223,11 @@
   .sticky {
     position: sticky;
     top: 3rem;
+  }
+
+  a {
+    text-decoration: underline;
+    font-weight: normal;
   }
 </style>
 

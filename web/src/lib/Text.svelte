@@ -31,7 +31,7 @@
       color == 'default' && 'c-default',
       color == 'default-lighter' && 'c-default-l',
       color == 'primary' && 'c-primary',
-      color == 'primary-contrast' && 'c-primary-c',
+      color == 'primary-c' && 'primary-c',
       color == 'accent' && 'c-accent',
       color == 'accent-contrast' && 'c-accent-c',
       color == 'success' && 'success',

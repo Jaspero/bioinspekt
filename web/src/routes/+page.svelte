@@ -33,16 +33,22 @@
     Imamo vješte, kvalificirane, i kvalitetne ljude
     koji su uvijek spremni pomoći i ponuditi savjete.
   </Text>
+
   <Margin size="2" />
+
   <Button href="/kontakt" appearance="filled" color="primary-l">Kontaktirajte nas</Button>
 </Cta>
 
 <svelte:head>
   <title>Bioinspekt</title>
-  <!--<meta
+  <meta
     name="description"
-    content="If this your first time using GlycanAge you might have some questions. Here is the best place to start."
-  />-->
+    content="Bioinspekt d.o.o. - Nadzor u ekološkoj proizvodnji"
+  />
+  <meta
+    name="keywords"
+    content="bioinspekt, eko, eko proizvodnja, ekoloska proizvodnja, eko proizvod"
+  />
 </svelte:head>
 
 <style>

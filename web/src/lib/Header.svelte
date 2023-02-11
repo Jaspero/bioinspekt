@@ -13,7 +13,7 @@
       <a href="/" class:active={$page.url.pathname === '/'}>Početna</a>
       <a href="/o-nama" class:active={$page.url.pathname === '/o-nama'}>O nama</a>
       <a href="/certifikacije" class:active={$page.url.pathname === '/certifikacije'}>Certifikacije</a>
-      <a href="/regulative" class:active={$page.url.pathname === '/regulative'}>Regulative</a>
+      <a href="/zakonske-regulative" class:active={$page.url.pathname === '/zakonske-regulative'}>Regulative</a>
       <a href="/obrasci" class:active={$page.url.pathname === '/obrasci'}>Obrasci</a>
       <a href="/kontakt" class:active={$page.url.pathname === '/kontakt'}>Kontakt</a>
     </nav>
