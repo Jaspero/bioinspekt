@@ -3,7 +3,7 @@
 </script>
 <div class="grid">
   <div class="col-12 flex jc-center">
-    <img src="logo.png" alt="" class="logo">
+    <img src="/logo.png" alt="" class="logo">
   </div>
 </div>
 

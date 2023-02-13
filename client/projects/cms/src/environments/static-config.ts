@@ -16,7 +16,7 @@ export const STATIC_CONFIG = {
 
     /**
      * This is added as the suffix instead
-     * 
+     *
      * @example
      * A component with the selector jms-table
      * is registered as an element with the selector
@@ -58,6 +58,18 @@ export const STATIC_CONFIG = {
         label: 'WEBSITE',
         type: 'expandable',
         children: [
+          {
+            icon: 'settings',
+            label: 'Certifikacije',
+            type: 'link',
+            value: '/m/certificates'
+          },
+          {
+            icon: 'settings',
+            label: 'Zakonske regulative',
+            type: 'link',
+            value: '/m/regulatives'
+          },
           {
             icon: 'settings',
             label: 'LAYOUT',

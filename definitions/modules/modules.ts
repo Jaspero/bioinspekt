@@ -10,6 +10,8 @@ import {INQUIRIES_MODULE} from './inquiries.module';
 import {AUTOMATIC_EMAILS_MODULE} from './emails/automatic-emails.module';
 import {SENT_EMAILS_MODULE} from './emails/sent-emails.module';
 import {ROLE_HISTORY_MODULE} from './role-history.module';
+import {CERTIFICATES_MODULE} from './pages/certificates.module';
+import {REGULATIVES_MODULE} from './pages/regulatives.module';
 
 /**
  * Schemas for all of the modules
@@ -31,6 +33,8 @@ export const MODULES = [
   LAYOUT_MODULE,
   PAGES_MODULE,
   POSTS_MODULE,
+  CERTIFICATES_MODULE,
+  REGULATIVES_MODULE,
 
   AUTOMATIC_EMAILS_MODULE,
   SENT_EMAILS_MODULE,

@@ -21,6 +21,7 @@ const COLLECTIONS: Permissions = {
 		get: [false],
 		create: [false],
 		update: [false],
+    list: [false],
 		delete: [false]
 	},
 	posts: {
@@ -168,6 +169,8 @@ export async function compileRules() {
 	}
 
 	const final = RULES_BASE.replace('[[R]]', source.join('\n'));
+
+  console.log(final);
 
 	try {
 		await securityRules().releaseFirestoreRulesetFromSource(final);

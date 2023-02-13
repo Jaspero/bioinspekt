@@ -94,6 +94,78 @@
       </a>
       оd 30. listopada 2020. o izmjeni Priloga III. Uredbi (EU) 2018/848 Europskog parlamenta i Vijeća u pogledu određenih informacija koje je potrebno navesti pri označivanju ekoloških proizvoda
     </Text>
+
+    <Margin size="1" />
+
+    <Text>
+      <a href="docs/uredbe-ekoloske-proizvodnje/delegirana-uredba-komisije-eu-2021-715.pdf" target="_blank" rel="noreferrer">
+        DELEGIRANA UREDBA KOMISIJE (EU) 2021/715
+      </a>
+      оd 20. siječnja 2021. o izmjeni Uredbe (EU) 2018/848 Europskog parlamenta i Vijeća o zahtjevima za skupine subjekata
+    </Text>
+
+    <Margin size="1" />
+
+    <Text>
+      <a href="docs/uredbe-ekoloske-proizvodnje/delegirana-uredba-komisije-eu-2021-716.pdf" target="_blank" rel="noreferrer">
+        DELEGIRANA UREDBA KOMISIJE (EU) 2021/716
+      </a>
+      оd 9. veljače 2021. o izmjeni Priloga II. Uredbi (EU) 2018/848 Europskog parlamenta i Vijeća u pogledu pravila ekološke proizvodnje za klice i glavice cikorije, za hranu za određene životinje iz akvakulture i za liječenje protiv nametnika u akvakulturi
+    </Text>
+
+    <Margin size="1" />
+
+    <Text>
+      <a href="docs/uredbe-ekoloske-proizvodnje/delegirana-uredba-komisije-eu-2021-771.pdf" target="_blank" rel="noreferrer">
+        DELEGIRANA UREDBA KOMISIJE (EU) 2021/771
+      </a>
+      оd 21. siječnja 2021. o dopuni Uredbe (EU) 2018/848 Europskog parlamenta i Vijeća utvrđivanjem posebnih kriterija i uvjeta za provjere evidencije u službenim dokumentima u okviru službenih kontrola u ekološkoj proizvodnji i službenih kontrola skupina subjekata
+    </Text>
+
+    <Margin size="1" />
+
+    <Text>
+      <a href="docs/uredbe-ekoloske-proizvodnje/delegirana-uredba-komisije-eu-2021-1006.pdf" target="_blank" rel="noreferrer">
+        DELEGIRANA UREDBA KOMISIJE (EU) 2021/1006
+      </a>
+      оd 12. travnja 2021. o izmjeni Uredbe (EU) 2018/848 Europskog parlamenta i Vijeća u pogledu modela certifikata kojim se potvrđuje sukladnost s pravilima o ekološkoj proizvodnji
+    </Text>
+
+    <Margin size="1" />
+
+    <Text>
+      <a href="docs/uredbe-ekoloske-proizvodnje/provedbena-uredba-komisije-eu-2021-1165.pdf" target="_blank" rel="noreferrer">
+        PROVEDBENA UREDBA KOMISIJE (EU) 2021/1165
+      </a>
+      оd 15. srpnja 2021. o odobravanju određenih proizvoda i tvari za upotrebu u ekološkoj proizvodnji i utvrđivanju njihovih popisa
+    </Text>
+
+    <Margin size="1" />
+
+    <Text>
+      <a href="docs/uredbe-ekoloske-proizvodnje/delegirana-uredba-komisije-eu-2021-1189.pdf" target="_blank" rel="noreferrer">
+        DELEGIRANA UREDBA KOMISIJE (EU) 2021/1189
+      </a>
+      оd 7. svibnja 2021. o dopuni Uredbe (EU) 2018/848 Europskog parlamenta i Vijeća u pogledu proizvodnje i stavljanja na tržište biljnog reprodukcijskog materijala iz ekološkog heterogenog materijala određenih rodova ili vrsta
+    </Text>
+
+    <Margin size="1" />
+
+    <Text>
+      <a href="docs/uredbe-ekoloske-proizvodnje/delegirana-uredba-komisije-eu-2021-1342.pdf" target="_blank" rel="noreferrer">
+        DELEGIRANA UREDBA KOMISIJE (EU) 2021/1342
+      </a>
+      оd 27. svibnja 2021. o dopuni Uredbe (EU) 2018/848 Europskog parlamenta i Vijeća pravilima o informacijama koje treće zemlje te kontrolna tijela i kontrolne ustanove trebaju slati u svrhu nadzora njihova priznavanja na temelju članka 33. stavaka 2. i 3. Uredbe Vijeća (EZ) br. 834/2007 za uvezene ekološke proizvode te mjerama koje treba poduzeti u provedbi tog nadzora
+    </Text>
+
+    <Margin size="1" />
+
+    <Text>
+      <a href="docs/uredbe-ekoloske-proizvodnje/provedbena-uredba-komisije-eu-2021-1342.pdf" target="_blank" rel="noreferrer">
+        PROVEDBENA UREDBA KOMISIJE (EU) 2021/1342
+      </a>
+      оd 19. kolovoza 2021. o utvrđivanju određenih pravila u vezi s certifikatom koji se izdaje subjektima, skupinama subjekata i izvoznicima u trećim zemljama koji su uključeni u uvoz ekoloških proizvoda i proizvoda iz prijelaznog razdoblja u Uniju i utvrđivanju popisa priznatih kontrolnih tijela i kontrolnih ustanova u skladu s Uredbom (EU) 2018/848 Europskog parlamenta i Vijeća
+    </Text>
   </div>
 </div>
 

@@ -13,6 +13,8 @@ export async function getDocument<T = any>(collection: string, id: string): Prom
 export async function getPage(id: string, collection = 'pages') {
 	const page = await getDocument(collection, id);
 
+  console.log(page)
+
 	if (!page || !page.active) {
 		return {
 			status: 404
@@ -21,7 +23,7 @@ export async function getPage(id: string, collection = 'pages') {
 
 	const {blocks, meta, title, globalStyles} = page;
 	const scripts: string[] = [];
-	
+
 	let content = (blocks || []).reduce((acc: string, cur: any) => {
 
 		const {compiled = ''} = cur;
@@ -53,14 +55,12 @@ export async function getPage(id: string, collection = 'pages') {
 	}
 
 	return {
-		body: {
-			page: {
-				id,
-				content,
-				meta,
-				title,
-				scripts
-			}
-		}
+    page: {
+      id,
+      content: blocks ? content : page.content,
+      meta,
+      title,
+      scripts
+    }
 	}
 }

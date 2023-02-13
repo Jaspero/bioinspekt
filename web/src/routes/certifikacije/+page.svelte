@@ -9,7 +9,7 @@
 
 <div class="grid">
   <div class="col-12">
-    <a href="/biosuisse-organic" class="card">
+    <a href="/certifikacije/bio-suisse-standard" class="card">
       <img src="images/biosuisse-organic.jpeg" alt="" class="card-image">
 
       <span class="card-content">
@@ -20,7 +20,7 @@
   </div>
 
   <div class="col-12">
-    <a href="/dunav-soja" class="card">
+    <a href="/certifikacije/dunav-soja-standard" class="card">
       <img src="images/dunav-soja.png" alt="" class="card-image">
 
       <span class="card-content">
@@ -31,7 +31,7 @@
   </div>
 
   <div class="col-12">
-    <a href="/bez-gmo" class="card">
+    <a href="/certifikacije/bez-gmo-standard" class="card">
       <img src="images/bez-gmo.png" alt="" class="card-image">
 
       <span class="card-content">
@@ -42,7 +42,7 @@
   </div>
 
   <div class="col-12">
-    <a href="/zoi-i-zozp" class="card">
+    <a href="/certifikacije/zoi-i-zozp" class="card">
       <img src="images/zoi-i-zozp.png" alt="" class="card-image">
 
       <span class="card-content">
@@ -53,11 +53,11 @@
   </div>
 
   <div class="col-12">
-    <a href="/dokazana-kvaliteta" class="card">
+    <a href="/certifikacije/dokazana-kvaliteta-hrvatska" class="card">
       <img src="images/dokazana-kvaliteta.jpeg" alt="" class="card-image">
 
       <span class="card-content">
-        <Text size="large">Dokazana kvaliteta</Text>
+        <Text size="large">Dokazana Kvaliteta Hrvatska</Text>
         <img src="icons/arrow-right.svg" alt="" height="24" class="card-content-icon">
       </span>
     </a>

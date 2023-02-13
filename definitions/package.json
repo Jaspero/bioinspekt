@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "process": "ts-node process.ts",
-    "deploy:rules": "ts-node scripts/deploy-rules",
+    "deploy:rules": "cross-env GOOGLE_APPLICATION_CREDENTIALS=./serviceAccountKey.json ts-node scripts/deploy-rules",
     "build": "rm -rf dist && tsc",
     "start": "tsc --w",
     "setup": "cross-env FIRESTORE_EMULATOR_HOST=localhost:8080 ts-node setup.ts",
@@ -16,13 +16,15 @@
     "@jaspero/fb-tinymce": "2.13.1",
     "@jaspero/form-builder": "5.10.1",
     "adv-firestore-functions": "2.0.9",
-    "json-schema": "0.4.0"
+    "json-schema": "0.4.0",
+    "axios": "1.3.2"
   },
   "devDependencies": {
     "@google-cloud/storage": "5.8.3",
     "cross-env": "7.0.3",
     "csso": "5.0.3",
     "firebase-admin": "11.5.0",
+    "rimraf": "4.1.2",
     "ts-node": "10.7.0",
     "typescript": "4.8.2"
   }
