@@ -4,12 +4,12 @@
 </script>
 
 <Banner>
-  Zakonske regulative
+  Certifikacije
 </Banner>
 
 <div class="grid">
-  <div class="col-6">
-    <a href="/uredbe-ekoloske-proizvodnje" class="card">
+  <div class="col-12">
+    <a href="/zakonske-regulative/uredbe-ekoloske-proizvodnje" class="card">
       <span class="card-content">
         <Text size="large">Uredbe ekološke proizvodnje</Text>
         <img src="icons/arrow-right.svg" alt="" height="24" class="card-content-icon">
@@ -17,8 +17,8 @@
     </a>
   </div>
 
-  <div class="col-6">
-    <a href="/poticaji" class="card">
+  <div class="col-12">
+    <a href="/zakonske-regulative/poticaji" class="card">
       <span class="card-content">
         <Text size="large">Poticaji</Text>
         <img src="icons/arrow-right.svg" alt="" height="24" class="card-content-icon">
@@ -26,8 +26,8 @@
     </a>
   </div>
 
-  <div class="col-6">
-    <a href="/eko-znak-eu" class="card">
+  <div class="col-12">
+    <a href="/zakonske-regulative/eko-znak-eu" class="card">
       <span class="card-content">
         <Text size="large">Eko znak EU</Text>
         <img src="icons/arrow-right.svg" alt="" height="24" class="card-content-icon">
@@ -35,8 +35,8 @@
     </a>
   </div>
 
-  <div class="col-6">
-    <a href="/eko-znak-hr" class="card">
+  <div class="col-12">
+    <a href="/zakonske-regulative/eko-znak-hr" class="card">
       <span class="card-content">
         <Text size="large">Eko znak HR</Text>
         <img src="icons/arrow-right.svg" alt="" height="24" class="card-content-icon">
@@ -64,6 +64,10 @@
       }
     }
 
+    &-image {
+      height: 75px;
+    }
+
     &-content {
       flex: 1;
       display: flex;
@@ -79,5 +83,5 @@
 </style>
 
 <svelte:head>
-  <title>Zakonske regulative - Bioinspekt</title>
+  <title>Certifikacije - Bioinspekt</title>
 </svelte:head>
