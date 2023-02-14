@@ -72,6 +72,12 @@ export const STATIC_CONFIG = {
           },
           {
             icon: 'settings',
+            label: 'Obrasci',
+            type: 'link',
+            value: '/m/forms'
+          },
+          {
+            icon: 'settings',
             label: 'LAYOUT',
             type: 'link',
             value: '/m/settings/layout'
