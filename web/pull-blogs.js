@@ -1,39 +1,60 @@
 import fetch from 'node-fetch';
 import {readFileSync, writeFileSync} from 'fs';
+import * as util from 'util';
+
+util.inspect.defaultOptions.depth = null;
+
+async function collection(collectionId, path)  {
+  const res = await fetch(
+    `https://firestore.googleapis.com/v1/projects/jp-bioinspekt/databases/(default)/documents:runQuery`,
+    {
+      method: 'POST',
+      body: JSON.stringify({
+        structuredQuery: {
+          from: [{
+            collectionId
+          }],
+          where: {
+            fieldFilter: {
+              field: {
+                fieldPath: 'active'
+              },
+              op: 'EQUAL',
+              value: {
+                booleanValue: true,
+              }
+            }
+          },
+          orderBy: [{
+            field: {
+              fieldPath: 'publishedOn'
+            },
+            direction: 'DESCENDING'
+          }]
+        }
+      })
+    }
+  );
+
+  const items = await res.json();
+
+  return items.map(item => ({
+    item,
+    path
+  }))
+}
 
 async function exec() {
-	const res = await fetch(
-		`https://firestore.googleapis.com/v1/projects/bioviva-science/databases/(default)/documents:runQuery`,
-		{
-			method: 'POST',
-			body: JSON.stringify({
-				structuredQuery: {
-					from: [{
-						collectionId: 'posts'
-					}],
-					where: {
-						fieldFilter: {
-							field: {
-								fieldPath: 'active'
-							},
-							op: 'EQUAL',
-							value: {
-								booleanValue: true,
-							}
-						}
-					},
-					orderBy: [{
-						field: {
-							fieldPath: 'publishedOn'
-						},
-						direction: 'DESCENDING'
-					}]
-				}
-			})
-		}
-	);
+	const res = await Promise.all([
+    collection('certificates', 'certifikacije'),
+    collection('regulatives', 'zakonske-regulative'),
+    collection('forms', 'obrasci'),
+    collection('posts', 'blog'),
+  ]);
 
-	const items = await res.json();
+	const items = [].concat(...res);
+
+  console.log(items)
 
 	writeFileSync(
 		'svelte.config.js',
@@ -41,7 +62,7 @@ async function exec() {
 			.toString()
 			.replace(
 				`const BLOGS = [];`,
-				`const BLOGS = ${JSON.stringify(items.filter(doc => doc.document?.name).map(doc => `/blog/${doc.document.name.split('/').pop()}`))};`
+				`const BLOGS = ${JSON.stringify(items.filter(doc => doc.item.document?.name).map(doc => `/${doc.path}/${doc.item.document.name.split('/').pop()}`))};`
 			)
 	)
 

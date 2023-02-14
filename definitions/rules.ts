@@ -28,6 +28,18 @@ const COLLECTIONS: Permissions = {
 		get: [true],
 		list: [true]
 	},
+  certificates: {
+    get: [true],
+    list: [true]
+  },
+  regulatives: {
+    get: [true],
+    list: [true]
+  },
+  forms: {
+    get: [true],
+    list: [true]
+  },
 	inquiries: {
 		create: [true]
 	},
