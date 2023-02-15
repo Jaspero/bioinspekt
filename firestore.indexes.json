@@ -9,7 +9,7 @@
           "order": "ASCENDING"
         },
         {
-          "fieldPath": "publishedOn",
+          "fieldPath": "createdOn",
           "order": "DESCENDING"
         }
       ]
@@ -23,7 +23,7 @@
           "order": "ASCENDING"
         },
         {
-          "fieldPath": "publishedOn",
+          "fieldPath": "createdOn",
           "order": "DESCENDING"
         }
       ]
@@ -51,7 +51,7 @@
           "order": "ASCENDING"
         },
         {
-          "fieldPath": "publishedOn",
+          "fieldPath": "createdOn",
           "order": "DESCENDING"
         }
       ]

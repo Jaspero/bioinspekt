@@ -4,7 +4,7 @@ import * as util from 'util';
 
 util.inspect.defaultOptions.depth = null;
 
-async function collection(collectionId, path)  {
+async function collection(collectionId, path, sort = 'publishedOn')  {
   const res = await fetch(
     `https://firestore.googleapis.com/v1/projects/jp-bioinspekt/databases/(default)/documents:runQuery`,
     {
@@ -46,9 +46,9 @@ async function collection(collectionId, path)  {
 
 async function exec() {
 	const res = await Promise.all([
-    collection('certificates', 'certifikacije'),
-    collection('regulatives', 'zakonske-regulative'),
-    collection('forms', 'obrasci'),
+    collection('certificates', 'certifikacije', 'createdOn'),
+    collection('regulatives', 'zakonske-regulative', 'createdOn'),
+    collection('forms', 'obrasci', 'createdOn'),
     collection('posts', 'blog'),
   ]);
 
