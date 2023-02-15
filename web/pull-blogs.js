@@ -27,7 +27,7 @@ async function collection(collectionId, path, sort = 'publishedOn')  {
           },
           orderBy: [{
             field: {
-              fieldPath: 'publishedOn'
+              fieldPath: sort
             },
             direction: 'DESCENDING'
           }]
