@@ -1,9 +1,10 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-  import Banner from '../../../lib/Banner.svelte';
+  import Banner from '$lib/Banner.svelte';
 
 	export let data: PageData;
-  const page = data.page;
+
+  const {page} = data;
 </script>
 
 <Banner>
