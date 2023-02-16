@@ -76,7 +76,7 @@
         <h2 style="line-height: 1.25">Dokazano</h2>
 
         <Text align="center" max="32">
-          <a href="href=/docs/akreditacija.pdf" class="fw-normal"><u>Preuzmi</u> odobrenu akreditaciju tvrtke Bioinspekt</a>
+          <a href="/docs/akreditacija.pdf" target="_blank" rel="noreferrer" class="fw-normal"><u>Preuzmi</u> odobrenu akreditaciju tvrtke Bioinspekt</a>
         </Text>
       </div>
     </div>
