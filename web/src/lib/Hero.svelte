@@ -5,7 +5,7 @@
 <div class="hero">
   <img src="images/hero1.jpg" alt="">
   <div class="grid ai-center">
-    <div class="col-9">
+    <div class="col-9 col-s-12">
       <div class="hero-topic ff-cinzel">
         BIOINSPEKT D.O.O.
       </div>
@@ -28,12 +28,20 @@
   .grid {
     z-index: 2;
     position: relative;
-    min-height: calc(100vh - 18rem);
+    min-height: calc(100vh - 208px);
+
+    @media (max-width: 1280px) {
+      min-height: calc(100vh - 200px);
+    }
   }
 
   .hero {
     position: relative;
-    min-height: calc(100vh - 18rem);
+    min-height: calc(100vh - 208px);
+
+    @media (max-width: 1280px) {
+      min-height: calc(100vh - 200px);
+    }
 
     &::after {
       content: '';
