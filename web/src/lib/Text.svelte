@@ -2,6 +2,7 @@
   export let align: 'left' | 'center' | 'right' = 'left';
   export let size: 'tiny' | 'small' | 'normal' | 'medium' | 'large' | 'huge' = 'normal';
   export let weight: 'normal' | 'bold' = 'normal';
+  export let fontFamily: 'cinzel' | 'sen' = 'sen';
   export let color:
     | 'default'
     | 'default-lighter'
@@ -28,10 +29,13 @@
       size == 'medium' && 'fs-medium',
       size == 'large' && 'fs-large',
       size == 'huge' && 'fs-huge',
+      fontFamily == 'cinzel' && 'ff-cinzel',
+      fontFamily == 'sen' && 'ff-sen',
       color == 'default' && 'c-default',
       color == 'default-lighter' && 'c-default-l',
       color == 'primary' && 'c-primary',
       color == 'primary-c' && 'primary-c',
+      color == 'primary-l' && 'primary-l',
       color == 'accent' && 'c-accent',
       color == 'accent-contrast' && 'c-accent-c',
       color == 'success' && 'success',

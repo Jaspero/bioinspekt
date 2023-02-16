@@ -29,6 +29,24 @@
   src: url('/fonts/Cinzel-Black.ttf');
 }
 
+@font-face {
+  font-family: Sen;
+  font-weight: 400;
+  src: url('/fonts/Sen-Regular.ttf');
+}
+
+@font-face {
+  font-family: Sen;
+  font-weight: 700;
+  src: url('/fonts/Sen-Bold.ttf');
+}
+
+@font-face {
+  font-family: Sen;
+  font-weight: 800;
+  src: url('/fonts/Sen-ExtraBold.ttf');
+}
+
 :root {
   /* Primary colors */
   --primary: #677237;
@@ -136,6 +154,14 @@ a {
   color: inherit;
 }
 
+.ff-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.ff-sen {
+  font-family: 'Sen', sans-serif;
+}
+
 .fs-tiny {
   font-size: 0.75rem;
 }
@@ -208,7 +234,10 @@ a {
 .c-accent {
   color: var(--accent);
 }
-.c-accent-c {
+.primary-l {
+  color: var(--primary-l)
+}
+/*.c-accent-c {
   color: var(--accent-c);
 }
 .success {
@@ -216,7 +245,7 @@ a {
 }
 .error {
   color: var(--error);
-}
+}*/
 
 /* Loading */
 .dashboard-overlay.loading {
