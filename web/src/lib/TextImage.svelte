@@ -17,27 +17,44 @@
   .container {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: stretch;
+
+    &:not(:first-child) {
+      border-top: 1px solid var(--primary-l);
+    }
 
     &.inverted {
       flex-direction: row-reverse;
     }
 
     .content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
       width: 50%;
+      padding: 2rem 1rem;
       background-color: var(--primary-c);
+
+      @media (max-width: 900px) {
+        width: 100%;
+        padding: 4rem 2rem;
+      }
     }
 
     .image {
       position: relative;
       width: 50%;
-      height: 0;
-      padding-bottom: 50%;
+
+      @media (max-width: 900px) {
+        display: none;
+      }
 
       img {
         position: absolute;
         width: 100%;
-        height: 100% ;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }

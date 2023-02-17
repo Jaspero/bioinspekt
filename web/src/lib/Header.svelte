@@ -9,7 +9,9 @@
 
 <div class="grid desktop">
   <div class="col-12 flex jc-center">
-    <img src="/logo.png" alt="" class="logo">
+    <a href="/">
+      <img src="/logo.png" alt="" class="logo">
+    </a>
   </div>
 </div>
 

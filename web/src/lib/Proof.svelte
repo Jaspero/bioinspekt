@@ -4,7 +4,7 @@
 </script>
 
 <div class="grid ai-center">
-  <div class="card-container col-4">
+  <div class="card-container col-4 col-s-6 col-xs-12">
     <div class="card">
       <div class="content">
         <img src="/icons/ucinkovitost.svg" alt="">
@@ -17,7 +17,7 @@
     </div>
   </div>
 
-  <div class="card-container col-4">
+  <div class="card-container col-4 col-s-6 col-xs-12">
     <div class="card">
       <div class="content">
         <img src="/icons/racionalnost.svg" alt="">
@@ -30,7 +30,7 @@
     </div>
   </div>
 
-  <div class="card-container col-4">
+  <div class="card-container col-4 col-s-6 col-xs-12">
     <div class="card">
       <div class="content">
         <img src="/icons/brzina.svg" alt="">
@@ -43,7 +43,7 @@
     </div>
   </div>
 
-  <div class="card-container col-4">
+  <div class="card-container col-4 col-s-6 col-xs-12">
     <div class="card">
       <div class="content">
         <img src="/icons/upornost.svg" alt="">
@@ -56,7 +56,7 @@
     </div>
   </div>
 
-  <div class="card-container col-4">
+  <div class="card-container col-4 col-s-6 col-xs-12">
     <div class="card">
       <div class="content">
         <img src="/icons/dostupnost.svg" alt="">
@@ -69,7 +69,7 @@
     </div>
   </div>
 
-  <div class="card-container col-4">
+  <div class="card-container col-4 col-s-6 col-xs-12">
     <div class="card">
       <div class="content">
         <img src="/icons/dokazano.svg" alt="">
@@ -87,10 +87,6 @@
   .card-container {
     text-align: center;
 
-    @media (max-width: 600px) {
-      text-align: left;
-    }
-
     .card {
       display: block;
       border: 1px solid var(--primary-l);
@@ -107,10 +103,6 @@
           margin: 0 auto 0.75rem;
 
           @media (max-width: 600px) {
-            position: relative;
-            padding-left: 1.5rem;
-            margin: 0 0 8px;
-            width: 100%;
             max-width: 18ch;
             font-weight: 700;
 
@@ -128,12 +120,6 @@
         h4 {
           max-width: 24ch;
           margin: 0 auto;
-
-          @media (max-width: 600px) {
-            padding-left: 1.5rem;
-            margin: 0;
-            font-size: 1rem;
-          }
         }
 
         a {

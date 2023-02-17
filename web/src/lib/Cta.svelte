@@ -17,6 +17,10 @@
       height: 0;
       padding-bottom: 30%;
 
+      @media (max-width: 900px) {
+        padding-bottom: 50%;
+      }
+
       &::after {
         content: '';
         position: absolute;
@@ -36,6 +40,7 @@
 
     .content {
       position: absolute;
+      width: 100%;
       top: 50%;
       left: 50%;
       text-align: center;

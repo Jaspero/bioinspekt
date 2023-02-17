@@ -40,6 +40,64 @@
   </slot>
 </About>
 
+<div class="certificates">
+  <TextImage src="images/hero1.jpg">
+    <Text size="huge" weight="bold" align="center">Bio Suisse Standard</Text>
+    <Margin size="1" />
+    <Text size="large" max="64" align="center">
+      Ukoliko ste naš klijent i imate mogućnost izvoza Vaših visokovrijednih proizvoda na zahtjevno Švicarsko tržište, u mogućnosti ste to izvesti uz kontrolu i certifikaciju prema ovom standardu.
+    </Text>
+    <Margin size="2" />
+    <div class="ta-center">
+      <Button href="/certifikacije/bio-suisse-standard" width="256">Saznaj više</Button>
+    </div>
+  </TextImage>
+  <TextImage src="images/hero1.jpg" inverted>
+    <Text size="huge" weight="bold" align="center">Dunav Soja Standard</Text>
+    <Margin size="1" />
+    <Text size="large" max="64" align="center">
+      Dunav Soja organizacija podržava i promovira održivu proizvodnju genetski nemodificirane soje u Europi, s ciljem smanjenja zavisnosti od uvoza i podrške domaćim proizvođačima.
+    </Text>
+    <Margin size="2" />
+    <div class="ta-center">
+      <Button href="/certifikacije/dunav-soja-standard" width="256">Saznaj više</Button>
+    </div>
+  </TextImage>
+  <TextImage src="images/hero1.jpg">
+    <Text size="huge" weight="bold" align="center">BEZ GMO Standard</Text>
+    <Margin size="1" />
+    <Text size="large" max="64" align="center">
+      Certifikatom "BEZ GMO Standard" garantira se da životinje nisu hranjene GM stočnom hranom, kao da ni u cijelom proizvodnom procesu nije bilo dodira sa GM sastojcima.
+    </Text>
+    <Margin size="2" />
+    <div class="ta-center">
+      <Button href="/certifikacije/bez-gmo-standard" width="256">Saznaj više</Button>
+    </div>
+  </TextImage>
+  <TextImage src="images/hero1.jpg" inverted>
+    <Text size="huge" weight="bold" align="center">Certifikacija ZOI i ZOZP</Text>
+    <Margin size="1" />
+    <Text size="large" max="64" align="center">
+      Ova certifikacija potrošačima jamči kupnju autentičnog i kontroliranog proizvoda, priznate kvalitete i lokalnog podrijedla
+    </Text>
+    <Margin size="2" />
+    <div class="ta-center">
+      <Button href="/certifikacije/zoi-i-zozp" width="256">Saznaj više</Button>
+    </div>
+  </TextImage>
+  <TextImage src="images/hero1.jpg">
+    <Text size="huge" weight="bold" align="center">Dokazana kvaliteta Hrvatska</Text>
+    <Margin size="1" />
+    <Text size="large" max="64" align="center">
+      Dokazana kvaliteta radi postizanja još veće prepoznatljivosti i promidžbe domaćih poljoprivrednih i prehrambenih proizvoda i to putem jedne, jedinstvene prepoznatljive oznake.
+    </Text>
+    <Margin size="2" />
+    <div class="ta-center">
+      <Button href="/certifikacije/dokazana-kvaliteta-hrvatska" width="256">Saznaj više</Button>
+    </div>
+  </TextImage>
+</div>
+
 <Cta>
   <Text max="42" size="medium" align="center" weight="bold">
     Imamo vješte, kvalificirane, i kvalitetne ljude
@@ -66,5 +124,9 @@
 <style>
   section {
     background-color: var(--bg);
+  }
+
+  .certificates {
+    border-top: 1px solid var(--primary-l);
   }
 </style>
