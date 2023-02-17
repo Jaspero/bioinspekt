@@ -3,6 +3,8 @@
   import Banner from '../../lib/Banner.svelte';
   import Text from '../../lib/Text.svelte';
   import Margin from '../../lib/Margin.svelte';
+  import Field from '../../lib/Field.svelte';
+  import Button from '../../lib/Button.svelte';
 
   const data = {
     name: '',
@@ -191,20 +193,21 @@
 
     <Card>
       <form class="contact-form m-t-l" on:submit|preventDefault={submit}>
-        <label for="name" class="field">
-          <input id="name" class="input-field" placeholder="Vaše ime" name="name" bind:value={data.name} required />
-          <span class="label">Vaše ime</span>
-        </label>
-        <label for="mail" class="field">
+        <Field id="name" placeholder="Vaše ime" name="name" label="Vaše ime" bind:value={data.name} required />
+        <Field id="email" type="email" placeholder="Vaš email" name="email" label="Vaš email" bind:value={data.email} required />
+        <Field id="message" placeholder="Poruka" name="message" label="Poruka" bind:value={data.message} required>
+          <slot slot="textarea"></slot>
+        </Field>
+        <!--<label for="mail" class="field">
           <input id="mail" class="input-field" placeholder="Vaš e-mail" name="email" type="email" bind:value={data.email} required />
           <span class="label">Vaš e-mail</span>
         </label>
         <label for="message" class="field">
           <textarea id="message" class="input-field" placeholder="Vaša poruka" name="message" rows="10" bind:value={data.message} required ></textarea>
           <span class="label">Vaša poruka</span>
-        </label>
+        </label>-->
         <div class="m-t-m">
-          <button type="submit" {loading}>Pošalji</button>
+          <Button type="submit" {loading}>Pošalji</Button>
         </div>
 
         {#if submitted}
@@ -219,7 +222,7 @@
   </div>
 </div>
 
-<style>
+<style lang="scss">
   .sticky {
     position: sticky;
     top: 3rem;
@@ -228,6 +231,22 @@
   a {
     text-decoration: underline;
     font-weight: normal;
+  }
+
+  .field {
+    background-color: var(--primary-l);
+    border-bottom: 1px solid var(--primary-c);
+    color: var(--primary-l-c);
+    padding: 1rem;
+
+    &-input {
+      background-color: transparent;
+      border: none;
+    }
+
+    &-label {
+
+    }
   }
 </style>
 
