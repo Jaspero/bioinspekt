@@ -4,7 +4,7 @@
 </script>
 
 <Banner>
-  Certifikacije
+  Zakonske regulative
 </Banner>
 
 <div class="grid">
