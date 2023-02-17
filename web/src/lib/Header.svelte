@@ -67,7 +67,7 @@
     position: sticky;
     top: 0;
     background-color: var(--primary);
-    height: 2.5rem;
+    height: 4rem;
     width: 100%;
 
     @media (max-width: 600px) {
@@ -82,9 +82,14 @@
         align-items: center;
         color: var(--primary-c);
         opacity: .75;
-        padding: 0 1rem;
+        font-size: 1.25rem;
+        padding: 0 2rem;
         height: 100%;
         transition: .25s;
+
+        @media (max-width: 900px) {
+          font-size: 1rem;
+        }
 
         &:hover {
           opacity: 1;

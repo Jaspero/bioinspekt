@@ -33,7 +33,7 @@
       justify-content: center;
       flex-direction: column;
       width: 50%;
-      padding: 2rem 1rem;
+      padding: 6rem 1rem;
       background-color: var(--primary-c);
 
       @media (max-width: 900px) {

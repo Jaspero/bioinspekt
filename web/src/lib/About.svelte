@@ -10,7 +10,7 @@
       </b>
     {/if}
     {#if $$slots.title}
-      <div class="col-12">
+      <div class="w-full">
         <Text size="huge" weight="bold">
           <slot name="title" />
         </Text>

@@ -105,15 +105,6 @@
           @media (max-width: 600px) {
             max-width: 18ch;
             font-weight: 700;
-
-            &::before {
-              content: '';
-              position: absolute;
-              border-top: 3px solid var(--accent);
-              top: 0.95rem;
-              left: 0;
-              width: 0.875rem;
-            }
           }
         }
 

@@ -41,7 +41,7 @@
 </About>
 
 <div class="certificates">
-  <TextImage src="images/hero1.jpg">
+  <TextImage src="images/globe.jpg">
     <Text size="huge" weight="bold" align="center">Bio Suisse Standard</Text>
     <Margin size="1" />
     <Text size="large" max="64" align="center">
@@ -52,7 +52,7 @@
       <Button href="/certifikacije/bio-suisse-standard" width="256">Saznaj više</Button>
     </div>
   </TextImage>
-  <TextImage src="images/hero1.jpg" inverted>
+  <TextImage src="images/harvest.jpg" inverted>
     <Text size="huge" weight="bold" align="center">Dunav Soja Standard</Text>
     <Margin size="1" />
     <Text size="large" max="64" align="center">
@@ -63,7 +63,7 @@
       <Button href="/certifikacije/dunav-soja-standard" width="256">Saznaj više</Button>
     </div>
   </TextImage>
-  <TextImage src="images/hero1.jpg">
+  <TextImage src="images/farm.jpg">
     <Text size="huge" weight="bold" align="center">BEZ GMO Standard</Text>
     <Margin size="1" />
     <Text size="large" max="64" align="center">
@@ -74,7 +74,7 @@
       <Button href="/certifikacije/bez-gmo-standard" width="256">Saznaj više</Button>
     </div>
   </TextImage>
-  <TextImage src="images/hero1.jpg" inverted>
+  <TextImage src="images/cow.jpg" inverted>
     <Text size="huge" weight="bold" align="center">Certifikacija ZOI i ZOZP</Text>
     <Margin size="1" />
     <Text size="large" max="64" align="center">
@@ -85,7 +85,7 @@
       <Button href="/certifikacije/zoi-i-zozp" width="256">Saznaj više</Button>
     </div>
   </TextImage>
-  <TextImage src="images/hero1.jpg">
+  <TextImage src="images/apples.jpg">
     <Text size="huge" weight="bold" align="center">Dokazana kvaliteta Hrvatska</Text>
     <Margin size="1" />
     <Text size="large" max="64" align="center">

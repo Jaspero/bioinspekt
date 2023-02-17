@@ -41,60 +41,51 @@
     <div class="col-3 col-xs-6">
       <Text size="small" weight="bold" color="primary-c">Zakonske regulative</Text>
       <Margin size=".5" />
-      <a href="/dunav-soja-standard">
+      <a href="/zakonske-regulative/uredbe-ekoloske-proizvodnje">
         <Text size="small" weight="bold" color="primary-c"><u>Uredbe ekološke proizvodnje</u></Text>
       </a>
-      <a href="/bez-gmo-standard">
+      <a href="/zakonske-regulative/poticaji">
         <Text size="small" weight="bold" color="primary-c"><u>Poticaji</u></Text>
       </a>
-      <a href="/zoi-i-zozp">
+      <a href="/zakonske-regulative/eko-znak-eu">
         <Text size="small" weight="bold" color="primary-c"><u>Eko znak EU</u></Text>
       </a>
-      <a href="/dokazana-kvaliteta">
+      <a href="/zakonske-regulative/eko-znak-hr">
         <Text size="small" weight="bold" color="primary-c"><u>Eko znak HR</u></Text>
-      </a>
-      <Margin size="1.5" />
-      <Text size="small" weight="bold" color="primary-c">Koraci do eko znaka</Text>
-      <Margin size=".5" />
-      <a href="/dokazana-kvaliteta">
-        <Text size="small" weight="bold" color="primary-c"><u>Obavijesti za klijente - kontrola i certifikacija</u></Text>
-      </a>
-      <a href="/dokazana-kvaliteta">
-        <Text size="small" weight="bold" color="primary-c"><u>Obavijesti klijentima (1)</u></Text>
-      </a>
-      <a href="/dokazana-kvaliteta">
-        <Text size="small" weight="bold" color="primary-c"><u>Obavijesti klijentima (2)</u></Text>
       </a>
     </div>
 
     <div class="col-3 col-xs-6">
       <Text size="small" weight="bold" color="primary-c">Certifikacije</Text>
       <Margin size=".5" />
-      <a href="/biosuisse-organic">
+      <a href="/certifikacije/bio-suisse-standard">
         <Text size="small" weight="bold" color="primary-c"><u>Bio Suisse standard</u></Text>
       </a>
-      <a href="/dunav-soja">
+      <a href="/certifikacije/dunav-soja-standard">
         <Text size="small" weight="bold" color="primary-c"><u>Dunav Soja standard</u></Text>
       </a>
-      <a href="/bez-gmo">
+      <a href="/certifikacije/bez-gmo-standard">
         <Text size="small" weight="bold" color="primary-c"><u>BEZ GMO standard</u></Text>
       </a>
-      <a href="/zoi-i-zozp">
+      <a href="/certifikacije/zoi-i-zozp">
         <Text size="small" weight="bold" color="primary-c"><u>ZOI i ZOZP</u></Text>
       </a>
-      <a href="/dokazana-kvaliteta">
+      <a href="/certifikacije/dokazana-kvaliteta-hrvatska">
         <Text size="small" weight="bold" color="primary-c"><u>Dokazana kvaliteta</u></Text>
       </a>
     </div>
 
     <div class="col-3 col-xs-6">
-      <Text size="small" weight="bold" color="primary-c">O Bioinspekt d.o.o.</Text>
+      <Text size="small" weight="bold" color="primary-c">Koraci do eko znaka</Text>
       <Margin size=".5" />
-      <a href="/o-nama">
-        <Text size="small" weight="bold" color="primary-c"><u>O nama</u></Text>
+      <a href="/">
+        <Text size="small" weight="bold" color="primary-c"><u>Obavijesti za klijente - kontrola i certifikacija</u></Text>
       </a>
-      <a href="/misija-vizija-i-ciljevi">
-        <Text size="small" weight="bold" color="primary-c"><u>Misija, vizija i ciljevi</u></Text>
+      <a href="/">
+        <Text size="small" weight="bold" color="primary-c"><u>Obavijesti klijentima (1)</u></Text>
+      </a>
+      <a href="/">
+        <Text size="small" weight="bold" color="primary-c"><u>Obavijesti klijentima (2)</u></Text>
       </a>
     </div>
   </div>
