@@ -6,7 +6,7 @@
 </script>
 
 <Banner>
-  Certifikacije
+  Obrasci
 </Banner>
 
 <div class="grid">
