@@ -10,6 +10,15 @@ export async function getDocument<T = any>(collection: string, id: string): Prom
 	return null;
 }
 
+export async function getDocuments<T = any>(collection: string): Promise<T[]> {
+	const {docs} = await fs.collection(collection).get();
+
+	return docs.map(doc => ({
+		id: doc.id,
+		...doc.data()
+	}) as T);
+}
+
 export async function getPage(id: string, collection = 'pages') {
 	const page = await getDocument(collection, id);
 

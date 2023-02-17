@@ -1,6 +1,8 @@
-<script>
-  import Text from '../../lib/Text.svelte';
-  import Banner from '../../lib/Banner.svelte';
+<script lang="ts">
+  import Text from '$lib/Text.svelte';
+  import Banner from '$lib/Banner.svelte';
+
+  export let data: any[];
 </script>
 
 <Banner>
