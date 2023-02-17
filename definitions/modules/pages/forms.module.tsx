@@ -25,16 +25,9 @@ export const FORMS_MODULE: Module = {
           type: 'card',
           fields: [
             '/title',
-            '/id'
+            '/url'
           ],
           columnsDesktop: 6
-        },
-        META.segment({columnsDesktop: 6}),
-        {
-          type: 'empty',
-          fields: [
-            '/content'
-          ]
         }
       ]
     },
@@ -43,11 +36,11 @@ export const FORMS_MODULE: Module = {
         CREATED_ON.column(),
         {key: '/title', label: 'TITLE'},
         {
-          key: '/id',
+          key: '/url',
           label: 'URL',
           pipe: [PipeType.Custom],
           pipeArguments: {
-            0: id => JSX(<a class="link" target="_blank" href={SHARED_CONFIG.webUrl + '/' + id}>{id}</a>)
+            0: id => JSX(<a class="link" target="_blank" href={id}>{id}</a>)
           }
         },
         {key: '/active', label: 'ACTIVE', control: true},
@@ -57,10 +50,9 @@ export const FORMS_MODULE: Module = {
   },
   schema: {
     properties: {
-      id: {type: 'string', pattern: '^[A-Za-z0-9\-\_]*$'},
+      url: {type: 'string'},
       title: {type: 'string'},
       active: {type: 'boolean'},
-      content: {type: 'string'},
       ...CREATED_ON.property,
       ...META.property(),
       ...STATUS.property
@@ -68,19 +60,13 @@ export const FORMS_MODULE: Module = {
     required: ['title']
   },
   definitions: {
-    id: {
+    url: {
       label: 'URL',
       disableOn: 'edit',
       formatOnSave: FORMAT_SEARCH(),
-      hint: 'ID_HINT'
     },
-    title: {label: 'TITLE'},
+    title: {label: 'Tekst linka'},
     active: {label: ''},
-    content: {
-      component: {
-        type: 'tinymce'
-      }
-    },
     ...CREATED_ON.definition(),
     ...META.definitions(),
     ...STATUS.definition
