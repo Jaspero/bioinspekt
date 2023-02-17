@@ -48,7 +48,6 @@ async function exec() {
 	const res = await Promise.all([
     collection('certificates', 'certifikacije', 'createdOn'),
     collection('regulatives', 'zakonske-regulative', 'createdOn'),
-    collection('forms', 'obrasci', 'createdOn'),
     collection('posts', 'blog'),
   ]);
 
