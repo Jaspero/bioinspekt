@@ -19,7 +19,6 @@
   <div class="grid jc-center h-full">
     <nav class="flex jc-center">
       <a href="/" class:active={$page.url.pathname === '/'}>Početna</a>
-      <a href="/o-nama" class:active={$page.url.pathname === '/o-nama'}>O nama</a>
       <a href="/certifikacije" class:active={$page.url.pathname === '/certifikacije'}>Certifikacije</a>
       <a href="/zakonske-regulative" class:active={$page.url.pathname === '/zakonske-regulative'}>Regulative</a>
       <a href="/obrasci" class:active={$page.url.pathname === '/obrasci'}>Obrasci</a>
@@ -39,7 +38,6 @@
 {#if menu}
   <div class="menu" in:fly="{{ y: -200, duration: 200 }}">
     <a href="/" class:active={$page.url.pathname === '/'} on:click={() => menu = false}>Početna</a>
-    <a href="/o-nama" class:active={$page.url.pathname === '/o-nama'} on:click={() => menu = false}>O nama</a>
     <a href="/certifikacije" class:active={$page.url.pathname === '/certifikacije'} on:click={() => menu = false}>Certifikacije</a>
     <a href="/zakonske-regulative" class:active={$page.url.pathname === '/zakonske-regulative'} on:click={() => menu = false}>Regulative</a>
     <a href="/obrasci" class:active={$page.url.pathname === '/obrasci'} on:click={() => menu = false}>Obrasci</a>
