@@ -3,8 +3,6 @@
   import Banner from '$lib/Banner.svelte';
 
   export let data: any[];
-
-  console.log(data)
 </script>
 
 <Banner>

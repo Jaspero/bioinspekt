@@ -41,6 +41,18 @@
 </About>
 
 <div class="certificates">
+  <TextImage src="images/eu-parlament.jpeg" inverted>
+    <Text size="huge" weight="bold" align="center">Uredba (EU) 2018/848 Europskog parlamenta i vijeća</Text>
+    <Margin size="1" />
+    <Text size="large" max="48" align="center">
+      o ekološkoj proizvodnji i označivanju ekoloških proizvoda te stavljanju izvan snage
+      <br>Uredbe Vijeća (EZ) br. 834/2007
+    </Text>
+    <Margin size="2" />
+    <div class="ta-center">
+      <Button href="https://firebasestorage.googleapis.com/v0/b/jp-bioinspekt.appspot.com/o/obrasci%2FUredba%202018_848_konsolidirana%20verzija.docx?alt=media&token=4b6aaa66-d281-4518-a787-a11ef6dcf916" width="256">Preuzmi dokumentaciju</Button>
+    </div>
+  </TextImage>
   <TextImage src="images/globe.jpg">
     <Text size="huge" weight="bold" align="center">Bio Suisse Standard</Text>
     <Margin size="1" />
@@ -99,9 +111,8 @@
 </div>
 
 <Cta>
-  <Text max="42" size="medium" align="center" weight="bold">
-    Imamo vješte, kvalificirane, i kvalitetne ljude
-    koji su uvijek spremni pomoći i ponuditi savjete.
+  <Text max="42" size="large" align="center" weight="bold">
+    Imamo vješte, kvalificirane ljude koji su uvijek spremni pomoći i predstaviti svoje uvide
   </Text>
 
   <Margin size="2" />

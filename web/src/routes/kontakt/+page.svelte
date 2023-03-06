@@ -120,11 +120,17 @@
 
       <Margin size="1" />
 
-      <Text weight="bold">Kontrolor</Text>
+      <!--<Text weight="bold">Kontrolor</Text>
       <Text>Davor Lamešić, mag. ing. agr.</Text>
       <a href="tel:+385995898100" class="flex ai-center">
         <img src="icons/phone.svg" alt="" height="20" class="m-r-s">
         +385 99 589 8100
+      </a>-->
+      <Text weight="bold">Kontrolor</Text>
+      <Text>Martin Visković, mag. ing. agr.</Text>
+      <a href="tel:+385993669792" class="flex ai-center">
+        <img src="icons/phone.svg" alt="" height="20" class="m-r-s">
+        +385 99 366 9792
       </a>
 
       <Margin size="1" />
@@ -144,11 +150,6 @@
         <img src="icons/phone.svg" alt="" height="20" class="m-r-s">
         +385 99 526 0377
       </a>
-
-      <Margin size="1" />
-
-      <Text weight="bold">Poslovna administratorica</Text>
-      <Text>Melita Cvitan</Text>
     </Card>
   </div>
 
