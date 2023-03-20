@@ -10,7 +10,7 @@ export const SHARED_CONFIG: {
 } = {
 	github: {
 		organization: 'Jaspero',
-		repository: 'jms',
+		repository: 'bioinspekt',
 	},
 	projectId: 'jp-bioinspekt',
 	cloudRegion: 'europe-west1',
