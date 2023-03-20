@@ -12,7 +12,7 @@
 <div class="grid">
   {#each data.forms as form}
     <div class="col-12">
-      <a href={form.url} target="_blank" rel="noreferrer" class="card">
+      <a href={form.file || form.url} target="_blank" rel="noreferrer" class="card">
         <Text size="large">{form.title}</Text>
         <img src="icons/arrow-right.svg" alt="" height="24" class="card-icon">
       </a>

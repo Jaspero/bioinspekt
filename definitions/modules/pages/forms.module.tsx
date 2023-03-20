@@ -25,7 +25,8 @@ export const FORMS_MODULE: Module = {
           type: 'card',
           fields: [
             '/title',
-            '/url'
+            '/url',
+            '/file'
           ],
           columnsDesktop: 6
         }
@@ -38,6 +39,14 @@ export const FORMS_MODULE: Module = {
         {
           key: '/url',
           label: 'URL',
+          pipe: [PipeType.Custom],
+          pipeArguments: {
+            0: id => JSX(<a class="link" target="_blank" href={id}>{id}</a>)
+          }
+        },
+        {
+          key: '/file',
+          label: 'File',
           pipe: [PipeType.Custom],
           pipeArguments: {
             0: id => JSX(<a class="link" target="_blank" href={id}>{id}</a>)
@@ -64,6 +73,12 @@ export const FORMS_MODULE: Module = {
       label: 'URL',
       disableOn: 'edit',
       formatOnSave: FORMAT_SEARCH(),
+    },
+    file: {
+      label: 'File',
+      component: {
+        type: 'file'
+      }
     },
     title: {label: 'Tekst linka'},
     active: {label: ''},
