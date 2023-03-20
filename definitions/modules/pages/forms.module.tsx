@@ -61,6 +61,7 @@ export const FORMS_MODULE: Module = {
     properties: {
       url: {type: 'string'},
       title: {type: 'string'},
+      file: {type: 'string'},
       active: {type: 'boolean'},
       ...CREATED_ON.property,
       ...META.property(),
