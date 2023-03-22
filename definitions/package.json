@@ -16,8 +16,7 @@
     "@jaspero/fb-tinymce": "2.13.1",
     "@jaspero/form-builder": "5.10.1",
     "adv-firestore-functions": "2.0.9",
-    "json-schema": "0.4.0",
-    "axios": "1.3.2"
+    "json-schema": "0.4.0"
   },
   "devDependencies": {
     "@google-cloud/storage": "5.8.3",

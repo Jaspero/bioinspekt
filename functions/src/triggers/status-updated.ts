@@ -12,6 +12,7 @@ export const statusUpdated = functions
   .region(SHARED_CONFIG.cloudRegion)
   .firestore.document(`settings/status`)
   .onUpdate(async change => {
+    
     const after = change.after.data() as Status;
     const before = change.before.data() as Status;
 

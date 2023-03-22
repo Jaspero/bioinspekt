@@ -25,7 +25,8 @@ export const FORMS_MODULE: Module = {
           type: 'card',
           fields: [
             '/title',
-            '/url'
+            '/url',
+            '/file'
           ],
           columnsDesktop: 6
         }
@@ -43,6 +44,14 @@ export const FORMS_MODULE: Module = {
             0: id => JSX(<a class="link" target="_blank" href={id}>{id}</a>)
           }
         },
+        {
+          key: '/file',
+          label: 'File',
+          pipe: [PipeType.Custom],
+          pipeArguments: {
+            0: id => JSX(<a class="link" target="_blank" href={id}>{id}</a>)
+          }
+        },
         {key: '/active', label: 'ACTIVE', control: true},
         STATUS.column
       ],
@@ -52,6 +61,7 @@ export const FORMS_MODULE: Module = {
     properties: {
       url: {type: 'string'},
       title: {type: 'string'},
+      file: {type: 'string'},
       active: {type: 'boolean'},
       ...CREATED_ON.property,
       ...META.property(),
@@ -64,6 +74,12 @@ export const FORMS_MODULE: Module = {
       label: 'URL',
       disableOn: 'edit',
       formatOnSave: FORMAT_SEARCH(),
+    },
+    file: {
+      label: 'File',
+      component: {
+        type: 'file'
+      }
     },
     title: {label: 'Tekst linka'},
     active: {label: ''},
