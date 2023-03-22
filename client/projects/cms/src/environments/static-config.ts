@@ -76,7 +76,7 @@ export const STATIC_CONFIG = {
             type: 'link',
             value: '/m/forms'
           },
-          {
+          /*{
             icon: 'settings',
             label: 'LAYOUT',
             type: 'link',
@@ -93,7 +93,7 @@ export const STATIC_CONFIG = {
             label: 'BLOG',
             type: 'link',
             value: '/m/posts'
-          }
+          }*/
         ]
       },
       {
