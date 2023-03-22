@@ -120,6 +120,23 @@
   <Button href="/kontakt" appearance="filled" color="primary-l">Kontaktirajte nas</Button>
 </Cta>
 
+<div class="grid p-y-xl">
+  <div class="col-12">
+    <h1 class="ta-center m-b-l">Korisni linkovi</h1>
+    <a href="https://fis.mps.hr/fis/javna-trazilica-szb/" target="_blank" rel="noreferrer" class="block ta-center">
+      <u>
+        FIS tražilica
+      </u>
+    </a>
+    <div class="m-y-s"></div>
+    <a href="https://poljoprivreda.gov.hr/istaknute-teme/poljoprivreda-173/poljoprivreda-175/ekoloska/baza-ekoloskog-poljoprivrednog-reprodukcijskog-materijala/3672" target="_blank" rel="noreferrer" class="block ta-center">
+      <u>
+        MINISTARSTVO POLJOPRIVREDE – Baza ekološkog poljoprivrednog reprodukcijskog materijala
+      </u>
+    </a>
+  </div>
+</div>
+
 <svelte:head>
   <title>Bioinspekt</title>
   <meta

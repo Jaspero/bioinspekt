@@ -28,7 +28,9 @@
 </header>
 
 <div class="nav-mobile" class:shadow={y > 0}>
-  <img src="/logo.png" alt="" class="logo">
+  <a href="/">
+    <img src="/logo.png" alt="" class="logo">
+  </a>
 
   <button on:click={() => menu = !menu}>
     <img src={menu ? '/icons/close.svg' : '/icons/menu.svg'} alt="" height="40">
