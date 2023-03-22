@@ -11,7 +11,9 @@ export async function getDocument<T = any>(collection: string, id: string): Prom
 }
 
 export async function getDocuments<T = any>(collection: string): Promise<T[]> {
-	const {docs} = await fs.collection(collection).get();
+	const {docs} = await fs.collection(collection)
+		.where('active', '==', true)
+		.get();
 
 	return docs.map(doc => ({
 		id: doc.id,
@@ -21,8 +23,6 @@ export async function getDocuments<T = any>(collection: string): Promise<T[]> {
 
 export async function getPage(id: string, collection = 'pages') {
 	const page = await getDocument(collection, id);
-
-  console.log(page)
 
 	if (!page || !page.active) {
 		return {
