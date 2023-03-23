@@ -81,10 +81,10 @@
       <a href="/kontrola-i-certifikacija">
         <Text size="small" weight="bold" color="primary-c"><u>Obavijesti za klijente - kontrola i certifikacija</u></Text>
       </a>
-      <a href="docs/obavijest-1.pdf" target="_blank" rel="noreferrer">
+      <a href="/docs/obavijest-1.pdf" target="_blank" rel="noreferrer">
         <Text size="small" weight="bold" color="primary-c"><u>Obavijesti klijentima (1)</u></Text>
       </a>
-      <a href="docs/obavijest-2.pdf" target="_blank" rel="noreferrer">
+      <a href="/docs/obavijest-2.pdf" target="_blank" rel="noreferrer">
         <Text size="small" weight="bold" color="primary-c"><u>Obavijesti klijentima (2)</u></Text>
       </a>
     </div>

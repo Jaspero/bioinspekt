@@ -15,7 +15,7 @@
       <br><br>
       U cilju poboljšanja provedbe Programa ruralnog razvoja Republike Hrvatske za razdoblje 2014-2020, Ministarstvo poljoprivrede provodi anketu o informiranosti proizvođača o provedbi tipa operacije 3.2.1 „Potpora za aktivnosti informiranja i promoviranja“.
       <br><br>
-      Molimo Vas da pogledate anketu dostupnu na <a href="/https://docs.google.com/forms/d/e/1FAIpQLScVecp8o69xXX0ziKbJ2X1RqxFDPsnT_9xL2_CfJuLAOwoU6Q/viewform?usp=sf_link" target="_blank" rel="noreferrer"><u>poveznici</u></a>
+      Molimo Vas da pogledate anketu dostupnu na <a href="https://docs.google.com/forms/d/e/1FAIpQLScVecp8o69xXX0ziKbJ2X1RqxFDPsnT_9xL2_CfJuLAOwoU6Q/viewform?usp=sf_link" target="_blank" rel="noreferrer"><u>poveznici</u></a>
       <br><br>
       S poštovanjem,
       <br>
