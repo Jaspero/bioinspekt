@@ -1,10 +1,10 @@
 <script>
-  import Card from '../../lib/Card.svelte';
-  import Banner from '../../lib/Banner.svelte';
-  import Text from '../../lib/Text.svelte';
-  import Margin from '../../lib/Margin.svelte';
-  import Field from '../../lib/Field.svelte';
-  import Button from '../../lib/Button.svelte';
+  import Card from '$lib/Card.svelte';
+  import Banner from '$lib/Banner.svelte';
+  import Text from '$lib/Text.svelte';
+  import Margin from '$lib/Margin.svelte';
+  import Field from '$lib/Field.svelte';
+  import Button from '$lib/Button.svelte';
 
   const data = {
     name: '',
@@ -35,14 +35,11 @@
       },
       message: {
         stringValue: data.message
-      },
-      status: {
-        stringValue: 'received'
       }
     };
 
     try {
-      await fetch(`https://firestore.googleapis.com/v1/projects/bioinspekt/databases/(default)/documents/contacts`, {
+      await fetch(`https://firestore.googleapis.com/v1/projects/jp-bioinspekt/databases/(default)/documents/inquiries`, {
         method: 'POST',
         body: JSON.stringify({fields})
       });
@@ -199,14 +196,6 @@
         <Field id="message" placeholder="Poruka" name="message" label="Poruka" bind:value={data.message} required>
           <slot slot="textarea"></slot>
         </Field>
-        <!--<label for="mail" class="field">
-          <input id="mail" class="input-field" placeholder="Vaš e-mail" name="email" type="email" bind:value={data.email} required />
-          <span class="label">Vaš e-mail</span>
-        </label>
-        <label for="message" class="field">
-          <textarea id="message" class="input-field" placeholder="Vaša poruka" name="message" rows="10" bind:value={data.message} required ></textarea>
-          <span class="label">Vaša poruka</span>
-        </label>-->
         <div class="m-t-m">
           <Button type="submit" {loading}>Pošalji</Button>
         </div>
