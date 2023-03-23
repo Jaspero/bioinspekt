@@ -78,13 +78,13 @@
     <div class="col-3 col-xs-6">
       <Text size="small" weight="bold" color="primary-c">Koraci do eko znaka</Text>
       <Margin size=".5" />
-      <a href="/">
+      <a href="/kontrola-i-certifikacija">
         <Text size="small" weight="bold" color="primary-c"><u>Obavijesti za klijente - kontrola i certifikacija</u></Text>
       </a>
-      <a href="/">
+      <a href="docs/obavijest-1.pdf" target="_blank" rel="noreferrer">
         <Text size="small" weight="bold" color="primary-c"><u>Obavijesti klijentima (1)</u></Text>
       </a>
-      <a href="/">
+      <a href="docs/obavijest-2.pdf" target="_blank" rel="noreferrer">
         <Text size="small" weight="bold" color="primary-c"><u>Obavijesti klijentima (2)</u></Text>
       </a>
     </div>
