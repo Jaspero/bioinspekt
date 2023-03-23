@@ -34,7 +34,7 @@
       class:flex={$$slots.suffix}
       class="field textarea"
     >
-      <textarea rows="6" {name} />
+      <textarea rows="6" {name} bind:value />
     </div>
   {:else if type === 'date'}
     <div
