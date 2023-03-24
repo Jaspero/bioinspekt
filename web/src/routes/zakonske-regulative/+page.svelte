@@ -83,5 +83,5 @@
 </style>
 
 <svelte:head>
-  <title>Certifikacije - Bioinspekt</title>
+  <title>Zakonske regulative - Bioinspekt</title>
 </svelte:head>

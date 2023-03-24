@@ -3,7 +3,7 @@
   import Banner from '$lib/Banner.svelte';
 
 	export let data: PageData;
-  
+
   const {page} = data;
 </script>
 
@@ -16,6 +16,10 @@
     {@html page.content}
   </div>
 </div>
+
+<svelte:head>
+  <title>{page.title} - Bioinspekt</title>
+</svelte:head>
 
 <style lang="scss">
   .grid {
