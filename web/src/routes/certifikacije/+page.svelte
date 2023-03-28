@@ -10,6 +10,8 @@
 <div class="grid">
   <div class="col-12">
     <a href="https://firebasestorage.googleapis.com/v0/b/jp-bioinspekt.appspot.com/o/obrasci%2FUredba%202018_848_konsolidirana%20verzija.docx?alt=media&token=4b6aaa66-d281-4518-a787-a11ef6dcf916" class="card">
+      <img src="images/eko-znak.jpeg" alt="" class="card-image">
+
       <span class="card-content">
         <Text size="large">Ekološka proizvodnja - Uredba (EU) 2018/848</Text>
         <img src="icons/arrow-right.svg" alt="" height="24" class="card-content-icon">
