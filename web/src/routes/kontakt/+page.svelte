@@ -100,7 +100,7 @@
       <Margin size="1" />
 
       <Text weight="bold">Kontrolor</Text>
-      <Text>Dražen Kraus, mag. ing. agr.</Text>
+      <Text>Borna Šimunić, mag. ing. agr.</Text>
       <a href="tel:+385993676938" class="flex ai-center">
         <img src="icons/phone.svg" alt="" height="20" class="m-r-s">
         +385 99 367 6938
