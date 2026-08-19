@@ -6,24 +6,29 @@ on:
         description: 'Release description'
 jobs:
   deploy:
-    env: 
+    env:
       project: 'jp-bioinspekt'
+      # Build Branch
+      # Deploy Web pushes the prebuilt web/node_modules here, which is why
+      # this workflow can skip `npm ci`. We always build from this branch,
+      # whatever ref the dispatch came in on.
+      build: 'build'
     name: Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-      - name: Install Dependencies
+        with:
+          ref: ${{ env.build }}
+      - name: Write Service Account Key
         run: |
           cd web
           echo $SERVICE_ACCOUNT > key.json
         env:
           SERVICE_ACCOUNT: ${{ secrets.SERVICE_ACCOUNT }}
       - name: Build
-        if: contains(github.ref, 'build')
         run: npm run build:web
       - name: Deploy to Firebase
-        if: contains(github.ref, 'build')
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting:web
@@ -31,7 +36,6 @@ jobs:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           PROJECT_ID: ${{ env.project }}
       - name: Update Firestore
-        if: contains(github.ref, 'build')
         run: |
           cd web
           node update-release.js
