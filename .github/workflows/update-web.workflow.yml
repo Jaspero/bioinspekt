@@ -15,6 +15,9 @@ jobs:
       build: 'build'
     name: Deploy
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
@@ -28,13 +31,13 @@ jobs:
           SERVICE_ACCOUNT: ${{ secrets.SERVICE_ACCOUNT }}
       - name: Build
         run: npm run build:web
-      - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
         with:
-          args: deploy --only hosting:web
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          PROJECT_ID: ${{ env.project }}
+          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+      - name: Deploy to Firebase
+        run: npx firebase-tools@15.31.0 deploy --only hosting:web --project ${{ env.project }} --non-interactive
       - name: Update Firestore
         run: |
           cd web

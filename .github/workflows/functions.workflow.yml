@@ -16,6 +16,9 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     env:
       project: 'jp-bioinspekt'
     steps:
@@ -51,25 +54,25 @@ jobs:
       - name: Build
         if: steps.changes.outputs.CHANGES || github.event_name == 'workflow_dispatch'
         run: npm --prefix functions run build
+      - name: Authenticate to Google Cloud
+        if: steps.changes.outputs.CHANGES || github.event_name == 'workflow_dispatch'
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
       - name: Set project
         if: steps.changes.outputs.CHANGES || github.event_name == 'workflow_dispatch'
-        run: npm run firebase -- use ${{ env.project }} --token $FIREBASE_TOKEN
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        run: npm run firebase -- use ${{ env.project }}
       - name: Deploy Changed Functions
         if: steps.changes.outputs.CHANGES
-        run: npm run firebase -- deploy --only $FILES --token $FIREBASE_TOKEN --force
+        run: npm run firebase -- deploy --only $FILES --force
         env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           FILES: ${{ steps.changes.outputs.CHANGES }}
       - name: Deploy All Functions
         if: github.event.inputs.functions == 'all'
-        run: npm run firebase -- deploy --only functions --token $FIREBASE_TOKEN --force
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        run: npm run firebase -- deploy --only functions --force
       - name: Deploy Some Functions
         if: github.event_name == 'workflow_dispatch' && github.event.inputs.functions != 'all'
-        run: npm run firebase -- deploy --only $FUNCTIONS --token $FIREBASE_TOKEN --force
+        run: npm run firebase -- deploy --only $FUNCTIONS --force
         env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}        
           FUNCTIONS: ${{ inputs.functions }}  
