@@ -53,6 +53,16 @@ no new scripts, fonts or requests; the 600 × 300 ZOI logo replaces the 150 × 7
   1366 px on 17 pages (after fixes 14 and 15). The mobile menu scrolls on short screens.
 - `lang="hr"` and a unique, descriptive `<title>` on every page; one h1 per page, no skipped heading levels.
 
+## Live (https://bioinspekt.hr, deployed e4ec43f4 via "Deploy Web")
+
+- axe: 0 violations on all 17 pages at 1366 and 390 px, and in the menu-open and contact success/error states.
+- Lighthouse 12 (median of 3, mobile / desktop): / 100/100/100/100 and 100/100/100/100; /certifikacije
+  97/100/96/100 and 100/100/100/100; /kontakt 100/100/100/100 both; /zakonske-regulative/eko-znak-eu
+  95/100/100/100 and 99/100/100/100. Before (live, same day): / 98/89/100/100 mobile, 100/94/100/100 desktop;
+  /certifikacije 97/94/93/100 mobile.
+- No console errors; contrast over photos, keyboard, reflow and text-spacing checks repeated on the live site with the
+  same results.
+
 ## Issues and fixes
 
 | # | Issue | WCAG | Fix | Visual impact |
