@@ -25,6 +25,20 @@ side in `compare/<area>-<desktop|mobile>.png`.
   | Hero subtitle (white) | 21–28 px bold | 2.90 | 4.04 | 3.0 |
   | CTA "Imamo vješte…" (white) | 15 px bold on phones, 21–24 px | 2.70 | 4.91 | 4.5 |
 
+**Lighthouse 12**, local static build without compression (performance / accessibility / best practices / SEO),
+median of 3:
+
+| Page | Before, mobile | After, mobile | Before, desktop | After, desktop |
+| --- | --- | --- | --- | --- |
+| / | 88/89/100/100 | 88/100/100/100 | 98/94/100/100 | 98/100/100/100 |
+| /certifikacije | 82/94/93/100 | 80/100/96/100 | 100/100/100/100 | 99/100/100/100 |
+| /kontakt | 96/84/96/100 | 95/100/100/100 | 100/90/100/100 | 100/100/100/100 |
+| /zakonske-regulative/eko-znak-eu | 67/94/100/100 | 65/100/100/100 | 95/100/100/100 | 95/100/100/100 |
+
+After = with fix 19 (BP re-measured after it). Performance is unchanged within run-to-run noise (CSS and markup only,
+no new scripts, fonts or requests; the 600 × 300 ZOI logo replaces the 150 × 75 one only on high-density screens).
+/certifikacije best practices stays at 96 because of the two low-resolution logos (see "Not fixed").
+
 **Keyboard, reflow, text spacing** (Playwright):
 
 - Tab order: skip link, logo, navigation, content, footer. Every focusable element shows a 3 px outline:
@@ -61,7 +75,8 @@ side in `compare/<area>-<desktop|mobile>.png`.
 | 16 | Links to files and new windows gave no warning; five identical "Saznaj više" links | 2.4.4 | Hidden text: "(PDF/DOCX, otvara se u novom prozoru)" on /obrasci, footer and downloads; "Saznaj više o certifikaciji …" | None |
 | 17 | ZOI i ZOZP logo on /certifikacije only 150 × 75 px (blurry on phones) | (Lighthouse BP) | `srcset` with the 600 × 300 px version already in the repo (`zoi-i-zozp-4x.png`) | Sharper logo |
 | 18 | Decorative CTA photo had `alt="polje"` | 1.1.1 | `alt=""` | None |
-| 19 | Extras | – | `prefers-reduced-motion` turns off transitions; "© 2023" → current year; `og:url` base jp-bioinspekt.web.app → https://bioinspekt.hr/; home title "Bioinspekt" → "Bioinspekt - kontrola i certifikacija ekološke proizvodnje" | Footer year |
+| 19 | On phones 49 % of the text was 10.5 px (`fs-small` 0.875rem with a 12 px root): footer, form note | (Lighthouse BP "legible font sizes") | `fs-small` is 1rem (12 px) below 600 px | Footer and small texts 10.5 → 12 px on phones. `compare/footer-mobile.png` |
+| 20 | Extras | – | `prefers-reduced-motion` turns off transitions; "© 2023" → current year; `og:url` base jp-bioinspekt.web.app → https://bioinspekt.hr/; home title "Bioinspekt" → "Bioinspekt - kontrola i certifikacija ekološke proizvodnje" | Footer year |
 
 ## Not fixed
 

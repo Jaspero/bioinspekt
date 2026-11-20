@@ -246,8 +246,9 @@ main:focus {
   .fs-tiny {
     font-size: 0.75rem;
   }
+  /* 0.875rem was 10.5px on phones (root 12px); 12px minimum for legible text */
   .fs-small {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   .fs-normal {
     font-size: 1rem;
