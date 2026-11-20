@@ -180,6 +180,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* on short screens (e.g. landscape or zoomed) the links scroll instead of being cut off */
+    justify-content: safe center;
+    overflow-y: auto;
+    overflow-x: hidden;
     width: 100%;
     height: calc(100vh - 124px);
     padding: 1rem;
