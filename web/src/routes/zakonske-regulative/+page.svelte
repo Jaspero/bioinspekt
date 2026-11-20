@@ -84,4 +84,5 @@
 
 <svelte:head>
   <title>Zakonske regulative - Bioinspekt</title>
+  <meta name="description" content="Zakonske regulative ekološke proizvodnje: uredbe, poticaji, eko znak EU i eko znak HR.">
 </svelte:head>

@@ -19,6 +19,7 @@
 
 <svelte:head>
   <title>{page.title} - Bioinspekt</title>
+  <meta name="description" content={page.meta?.description || `${page.title} - Bioinspekt d.o.o., kontrola i certifikacija ekološke proizvodnje.`}>
 </svelte:head>
 
 <style lang="scss">

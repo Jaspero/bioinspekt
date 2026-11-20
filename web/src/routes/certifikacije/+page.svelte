@@ -114,4 +114,5 @@
 
 <svelte:head>
   <title>Certifikacije - Bioinspekt</title>
+  <meta name="description" content="Certifikacija ekološke proizvodnje prema Uredbi (EU) 2018/848, Bio Suisse, Dunav Soja, BEZ GMO, ZOI i ZOZP te Dokazana kvaliteta - Hrvatska.">
 </svelte:head>

@@ -82,6 +82,7 @@
 
 <svelte:head>
   <title>Kontrola i certifikacija - Bioinspekt</title>
+  <meta name="description" content="Kako izgleda kontrola i certifikacija ekološke proizvodnje s Bioinspektom, od prijave do certifikata.">
 </svelte:head>
 
 <style>

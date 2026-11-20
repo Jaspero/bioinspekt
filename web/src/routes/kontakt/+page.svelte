@@ -242,4 +242,5 @@
 
 <svelte:head>
   <title>Kontakt - Bioinspekt</title>
+  <meta name="description" content="Kontakt Bioinspekt d.o.o.: adrese, telefoni i e-pošta kontrolora za ekološku proizvodnju u Hrvatskoj.">
 </svelte:head>

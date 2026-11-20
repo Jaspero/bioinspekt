@@ -54,4 +54,5 @@
 
 <svelte:head>
   <title>Obrasci - Bioinspekt</title>
+  <meta name="description" content="Obrasci za kontrolu i certifikaciju ekološke proizvodnje koje Bioinspekt d.o.o. daje subjektima u kontroli.">
 </svelte:head>
