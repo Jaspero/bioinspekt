@@ -4,7 +4,7 @@
       src="images/field.jpg"
       srcset="images/field-640.webp 640w, images/field-960.webp 960w, images/field-1280.webp 1280w, images/field-1920.webp 1920w"
       sizes="100vw"
-      alt="polje"
+      alt=""
       loading="lazy"
       decoding="async"
     >
@@ -33,7 +33,8 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: rgba(0,0,0,.35);
+        /* .35 -> .55: white text at least 4.5:1 over the photo, measured from pixels (WCAG 1.4.3) */
+        background-color: rgba(0,0,0,.55);
       }
 
       img {
@@ -53,6 +54,10 @@
       text-align: center;
       transform: translate(-50%, -50%);
       color: var(--primary-c);
+
+      :global(:focus-visible) {
+        outline-color: #FFFFFF;
+      }
     }
   }
 </style>

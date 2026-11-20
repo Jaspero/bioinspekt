@@ -15,6 +15,8 @@
     | 'error' = 'default';
   export let max: string | null = null;
   export let lineHeight: string | null = null;
+  /** Element to render, e.g. 'h2' for a section title that looks like body text sizes */
+  export let tag: 'p' | 'h1' | 'h2' | 'h3' | 'div' = 'p';
 
   $: properties = {
     class: [
@@ -50,6 +52,6 @@
   };
 </script>
 
-<p {...properties}>
+<svelte:element this={tag} {...properties}>
   <slot />
-</p>
+</svelte:element>

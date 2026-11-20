@@ -22,6 +22,8 @@
     }
 
     loading = true;
+    submitted = false;
+    error = false;
 
     const fields = {
       createdOn: {
@@ -39,10 +41,14 @@
     };
 
     try {
-      await fetch(`https://firestore.googleapis.com/v1/projects/jp-bioinspekt/databases/(default)/documents/inquiries`, {
+      const res = await fetch(`https://firestore.googleapis.com/v1/projects/jp-bioinspekt/databases/(default)/documents/inquiries`, {
         method: 'POST',
         body: JSON.stringify({fields})
       });
+
+      if (!res.ok) {
+        throw new Error(String(res.status));
+      }
 
       submitted = true;
       data.name = '';
@@ -152,7 +158,7 @@
 
   <div class="col-6 col-s-9 col-xs-12 sticky">
     <Card>
-      <Text size="large" weight="bold">O firmi</Text>
+      <Text tag="h2" size="large" weight="bold">O firmi</Text>
 
       <Margin size="1" />
 
@@ -190,9 +196,10 @@
     <Margin size="2" />
 
     <Card>
-      <form class="contact-form m-t-l" on:submit|preventDefault={submit}>
-        <Field id="name" placeholder="Vaše ime" name="name" label="Vaše ime" bind:value={data.name} required />
-        <Field id="email" type="email" placeholder="Vaš email" name="email" label="Vaš email" bind:value={data.email} required />
+      <form class="contact-form m-t-l" aria-label="Kontakt obrazac" on:submit|preventDefault={submit}>
+        <p class="fs-small m-b-s">Sva polja su obavezna.</p>
+        <Field id="name" placeholder="Vaše ime" name="name" label="Vaše ime" autocomplete="name" bind:value={data.name} required />
+        <Field id="email" type="email" placeholder="Vaš email" name="email" label="Vaš email" autocomplete="email" bind:value={data.email} required />
         <Field id="message" placeholder="Poruka" name="message" label="Poruka" bind:value={data.message} required>
           <slot slot="textarea"></slot>
         </Field>
@@ -200,13 +207,17 @@
           <Button type="submit" {loading}>Pošalji</Button>
         </div>
 
-        {#if submitted}
-          <p class="m-t-s">Vaša poruka je uspješno zaprimljena. Hvala vam na javljanju. Odgovoriti ćemo vam u najkraćemo mogućem roku.</p>
-        {/if}
+        <div role="status">
+          {#if submitted}
+            <p class="m-t-s">Vaša poruka je uspješno zaprimljena. Hvala vam na javljanju. Odgovoriti ćemo vam u najkraćemo mogućem roku.</p>
+          {/if}
+        </div>
 
-        {#if error}
-          <p class="m-t-s">Došlo je do greške. Molim vas probajte ponovno.</p>
-        {/if}
+        <div role="alert">
+          {#if error}
+            <p class="m-t-s">Došlo je do greške. Molim vas probajte ponovno.</p>
+          {/if}
+        </div>
       </form>
     </Card>
   </div>

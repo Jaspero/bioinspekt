@@ -4,9 +4,11 @@
   import Footer from '../lib/Footer.svelte';
 </script>
 
+<a href="#sadrzaj" class="skip-link">Preskoči na sadržaj</a>
+
 <Header />
 
-<main data-sveltekit-prefetch>
+<main id="sadrzaj" tabindex="-1" data-sveltekit-prefetch>
 	<slot />
 </main>
 

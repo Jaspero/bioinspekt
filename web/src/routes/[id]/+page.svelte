@@ -2,7 +2,7 @@
 	import Page from '$lib/Page.svelte';
 	import type { PageData } from './$types';
 
-	export let page: PageData;
+	export let data: PageData;
 </script>
 
-<Page {page} />
+<Page page={data.page} />

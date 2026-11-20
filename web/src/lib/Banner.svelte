@@ -1,11 +1,13 @@
- <p>
-   <slot></slot>
- </p>
+<h1>
+  <slot></slot>
+</h1>
 
 <style>
-  p {
+  h1 {
     text-align: center;
     font-size: 3rem;
+    font-weight: normal;
+    line-height: 1.5;
     padding: 1rem 0;
     background-color: var(--primary);
     color: var(--primary-c);

@@ -39,29 +39,26 @@
 
     <Margin size="3" />
 
-    <Text size="medium">
-      <b>Troškovi stručne kontrole i certifikacije</b>
-      <br><br>
-      Troškovi kontrole i certifikacije definirani su službenim Cjenikom tvrtke BIOINSPEKT d.o.o. Klijenti, korisnici naših usluga se o troškovima upoznaju prilikom potpisivanja ugovora o obavljanju stručne kontrole i certifikacije u ekološkoj proizvodnji.
+    <Text tag="h2" size="medium" weight="bold">Troškovi stručne kontrole i certifikacije</Text>
+    <Margin size="1.6875" />
+    <Text size="medium">Troškovi kontrole i certifikacije definirani su službenim Cjenikom tvrtke BIOINSPEKT d.o.o. Klijenti, korisnici naših usluga se o troškovima upoznaju prilikom potpisivanja ugovora o obavljanju stručne kontrole i certifikacije u ekološkoj proizvodnji.
       Potencijalnim klijentima certifikacijsko tijelo na pisani zahtjev izrađuje ponudu za provedbu stručne kontrole i certifikacije.
       <br><br>
-      <a href="docs/cjenik-usluga.pdf"><u>Cjenik usluga</u></a>
+      <a href="/docs/cjenik-usluga.pdf"><u>Cjenik usluga</u><span class="sr-only"> (PDF)</span></a>
     </Text>
 
     <Margin size="3" />
 
-    <Text size="medium">
-      <b>Postupanje s prizivima i prigovorima</b>
-      <br><br>
-      Certifikacijsko tijelo BIOINSPEKT d.o.o. ima dokumentirano i definirano postupanje po pitanju rješavanja zaprimljenih priziva. Priziv možete uputiti pisanim putem u roku od 14 dana nakon zaprimanja zapisnika o stručnoj kontroli, odluke o certifikaciji, te certifikata. Postupak rješavanja priziva i prigovora (PS) dostupan je na zahtjev svim zainteresiranim stranama.
+    <Text tag="h2" size="medium" weight="bold">Postupanje s prizivima i prigovorima</Text>
+    <Margin size="1.6875" />
+    <Text size="medium">Certifikacijsko tijelo BIOINSPEKT d.o.o. ima dokumentirano i definirano postupanje po pitanju rješavanja zaprimljenih priziva. Priziv možete uputiti pisanim putem u roku od 14 dana nakon zaprimanja zapisnika o stručnoj kontroli, odluke o certifikaciji, te certifikata. Postupak rješavanja priziva i prigovora (PS) dostupan je na zahtjev svim zainteresiranim stranama.
     </Text>
 
     <Margin size="3" />
 
-    <Text size="medium">
-      <b>Registar certificiranih subjekata</b>
-      <br><br>
-      Certifikacijsko tijelo BIOINSPEKT d.o.o. vodi registar certificiranih klijenata (subjekata) a isti je dostupan na službenim stranicama Nadležnog tijela (Ministarstva poljoprivrede).
+    <Text tag="h2" size="medium" weight="bold">Registar certificiranih subjekata</Text>
+    <Margin size="1.6875" />
+    <Text size="medium">Certifikacijsko tijelo BIOINSPEKT d.o.o. vodi registar certificiranih klijenata (subjekata) a isti je dostupan na službenim stranicama Nadležnog tijela (Ministarstva poljoprivrede).
     </Text>
 
     <Margin size="3" />

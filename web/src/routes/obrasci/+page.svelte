@@ -2,7 +2,13 @@
   import Text from '$lib/Text.svelte';
   import Banner from '$lib/Banner.svelte';
 
-  export let data: any[];
+  export let data: any;
+
+  /** File type shown to screen readers, from the file name in the link (e.g. PDF, DOC, DOCX, XLSX) */
+  function fileType(url: string = ''): string {
+    const m = decodeURIComponent(url.split('?')[0]).match(/\.([a-z0-9]{2,5})$/i);
+    return m && ['pdf', 'doc', 'docx', 'xls', 'xlsx', 'odt'].includes(m[1].toLowerCase()) ? m[1].toUpperCase() : '';
+  }
 </script>
 
 <Banner>
@@ -13,7 +19,7 @@
   {#each data.forms as form}
     <div class="col-12">
       <a href={form.file || form.url} target="_blank" rel="noreferrer" class="card">
-        <Text size="large">{form.title}</Text>
+        <Text size="large">{form.title}<span class="sr-only"> ({fileType(form.file || form.url) ? fileType(form.file || form.url) + ', ' : ''}otvara se u novom prozoru)</span></Text>
         <img src="icons/arrow-right.svg" alt="" height="24" class="card-icon">
       </a>
     </div>

@@ -2,7 +2,7 @@
   import Text from './Text.svelte';
 </script>
 
-<main>
+<div class="about">
   <div class="container">
     {#if $$slots.subtitle}
       <b>
@@ -11,7 +11,7 @@
     {/if}
     {#if $$slots.title}
       <div class="w-full">
-        <Text size="huge" weight="bold">
+        <Text tag="div" size="huge" weight="bold">
           <slot name="title" />
         </Text>
       </div>
@@ -22,10 +22,10 @@
       </div>
     {/if}
   </div>
-</main>
+</div>
 
 <style lang="scss">
-  main {
+  .about {
     position: relative;
     display: flex;
     justify-content: center;

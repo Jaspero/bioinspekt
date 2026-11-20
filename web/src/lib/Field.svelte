@@ -14,17 +14,21 @@
   export let autocomplete: string = '';
   export let required = false;
   export let value = '';
+  export let id = '';
+
+  const fieldId = id || `field-${name || Math.random().toString(36).slice(2, 8)}`;
+  const descriptionId = `${fieldId}-opis`;
 </script>
 
 <div>
   {#if label}
     <div class="label">
-      <span>{label}</span>
+      <label for={fieldId}>{label}</label>
     </div>
   {/if}
 
   {#if $$slots.description}
-    <div class="description">
+    <div class="description" id={descriptionId}>
       <slot name="description" />
     </div>
   {/if}
@@ -34,7 +38,7 @@
       class:flex={$$slots.suffix}
       class="field textarea"
     >
-      <textarea rows="6" {name} bind:value />
+      <textarea id={fieldId} rows="6" {name} {required} {autocomplete} aria-describedby={$$slots.description ? descriptionId : undefined} bind:value />
     </div>
   {:else if type === 'date'}
     <div
@@ -43,6 +47,8 @@
     >
       <input
         type="date"
+        id={fieldId}
+        aria-describedby={$$slots.description ? descriptionId : undefined}
         {name}
         {placeholder}
         {required}
@@ -59,6 +65,8 @@
     >
       <input
         type="checkbox"
+        id={fieldId}
+        aria-describedby={$$slots.description ? descriptionId : undefined}
         {name}
         {placeholder}
         {required}
@@ -75,6 +83,8 @@
     >
       <input
         type="email"
+        id={fieldId}
+        aria-describedby={$$slots.description ? descriptionId : undefined}
         {name}
         {placeholder}
         {required}
@@ -91,6 +101,8 @@
     >
       <input
         type="password"
+        id={fieldId}
+        aria-describedby={$$slots.description ? descriptionId : undefined}
         {name}
         {placeholder}
         {required}
@@ -107,6 +119,8 @@
     >
       <input
         type="search"
+        id={fieldId}
+        aria-describedby={$$slots.description ? descriptionId : undefined}
         {name}
         {placeholder}
         {required}
@@ -124,6 +138,8 @@
     >
       <input
         type="text"
+        id={fieldId}
+        aria-describedby={$$slots.description ? descriptionId : undefined}
         {name}
         {placeholder}
         {required}
@@ -156,7 +172,8 @@
 
   .field {
     display: inline-block;
-    border: 1px solid var(--primary-l);
+    /* #C2C896 was 1.6:1 against the form card; #88904C is 3:1 (WCAG 1.4.11) */
+    border: 1px solid #88904C;
     border-radius: 4px;
     height: 3rem;
     overflow: hidden;
@@ -192,8 +209,8 @@
     }
 
     &:focus-within {
-      border-color: var(--accent);
-      outline: 2px dashed var(--accent);
+      border-color: var(--primary);
+      outline: 2px dashed var(--primary);
       outline-offset: 4px;
     }
 
@@ -207,6 +224,12 @@
       border: none;
       width: 100%;
       height: 100%;
+
+      &::placeholder {
+        /* browser default #757575 is 4.05:1 on this background */
+        color: #666666;
+        opacity: 1;
+      }
     }
   }
 </style>

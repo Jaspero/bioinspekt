@@ -16,9 +16,9 @@
       <div class="hero-topic ff-cinzel">
         BIOINSPEKT D.O.O.
       </div>
-      <div class="hero-title ff-cinzel">
+      <h1 class="hero-title ff-cinzel">
         PRVI U HRVATSKOJ ZA KONTROLU I CERTIFICIRANJE EKOLOŠKIH PROIZVODA
-      </div>
+      </h1>
       <Margin size="1" />
       <div class="hero-subtitle">
         Postanite jedni od rijetkih sa ekološkom certifikacijom u Hrvatskoj
@@ -55,7 +55,8 @@
       top: 0;
       z-index: 1;
       position: absolute;
-      background-color: rgba(0,0,0,.4);
+      /* .4 -> .5: text over the photo is at least 3.39:1 (large text) measured from pixels (WCAG 1.4.3) */
+      background-color: rgba(0,0,0,.5);
       width: 100%;
       height: 100%;
     }
@@ -63,7 +64,8 @@
     &-topic {
       color: #c1ff5b;
       font-weight: bold;
-      font-size: 1.25rem;
+      /* at least 19px bold (large text, 3:1) at every width; was 15px on phones */
+      font-size: max(1.25rem, 19px);
       letter-spacing: 4px;
     }
 
@@ -82,6 +84,10 @@
     }
 
     &-cta {
+      a:focus-visible {
+        outline-color: #FFFFFF;
+      }
+
       a {
         display: inline-block;
         font-size: 1.5rem;

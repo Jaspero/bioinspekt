@@ -64,7 +64,8 @@
   --primary-l-c: #000000;
 
   /* Accent colors */
-  --accent: #A9A74F;
+  /* #A9A74F darkened to #7A7939 (same hue): white text 4.54:1 (WCAG 1.4.3) */
+  --accent: #7A7939;
   --accent-c: #FFFFFF;
 
 
@@ -162,6 +163,56 @@ a {
   font-weight: 700;
   text-decoration: none;
   color: inherit;
+}
+
+/* Accessibility (WCAG 2.1 AA) */
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 100;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--primary-c);
+  color: var(--primary);
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.24);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+main:focus {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .ff-cinzel {

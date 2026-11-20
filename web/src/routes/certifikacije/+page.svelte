@@ -13,7 +13,7 @@
       <img src="images/eko-znak.jpeg" alt="" class="card-image">
 
       <span class="card-content">
-        <Text size="large">Ekološka proizvodnja - Uredba (EU) 2018/848</Text>
+        <Text size="large">Ekološka proizvodnja - Uredba (EU) 2018/848<span class="sr-only"> (preuzimanje, DOCX)</span></Text>
         <img src="icons/arrow-right.svg" alt="" height="24" class="card-content-icon">
       </span>
     </a>
@@ -54,7 +54,7 @@
 
   <div class="col-12">
     <a href="/certifikacije/zoi-i-zozp" class="card">
-      <img src="images/zoi-i-zozp.png" alt="" class="card-image">
+      <img src="images/zoi-i-zozp.png" srcset="images/zoi-i-zozp.png 1x, images/zoi-i-zozp-4x.png 4x" alt="" class="card-image">
 
       <span class="card-content">
         <Text size="large">ZOI i ZOZP</Text>

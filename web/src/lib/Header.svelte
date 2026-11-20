@@ -3,8 +3,42 @@
   import { fly } from 'svelte/transition';
 
 
+  import { tick } from 'svelte';
+
   let menu: boolean = false;
   let y
+  let menuButton: HTMLButtonElement;
+  let menuEl: HTMLElement;
+
+  const links = [
+    { href: '/', label: 'Početna' },
+    { href: '/certifikacije', label: 'Certifikacije' },
+    { href: '/zakonske-regulative', label: 'Regulative' },
+    { href: '/obrasci', label: 'Obrasci' },
+    { href: '/kontakt', label: 'Kontakt' }
+  ];
+
+  async function closeMenu(returnFocus = false) {
+    menu = false;
+    if (returnFocus) {
+      await tick();
+      menuButton?.focus();
+    }
+  }
+
+  function onKeydown(e: KeyboardEvent) {
+    if (menu && e.key === 'Escape') {
+      closeMenu(true);
+    }
+  }
+
+  /** Close the overlay menu when keyboard focus leaves the button and the menu, so focus never sits behind it */
+  function onFocusOut(e: FocusEvent) {
+    const next = e.relatedTarget as Node | null;
+    if (menu && next && !menuEl?.contains(next) && !menuButton?.contains(next)) {
+      closeMenu();
+    }
+  }
 </script>
 
 <div class="grid desktop">
@@ -17,12 +51,10 @@
 
 <header class="nav">
   <div class="grid jc-center h-full">
-    <nav class="flex jc-center">
-      <a href="/" class:active={$page.url.pathname === '/'}>Početna</a>
-      <a href="/certifikacije" class:active={$page.url.pathname === '/certifikacije'}>Certifikacije</a>
-      <a href="/zakonske-regulative" class:active={$page.url.pathname === '/zakonske-regulative'}>Regulative</a>
-      <a href="/obrasci" class:active={$page.url.pathname === '/obrasci'}>Obrasci</a>
-      <a href="/kontakt" class:active={$page.url.pathname === '/kontakt'}>Kontakt</a>
+    <nav class="flex jc-center" aria-label="Glavna navigacija">
+      {#each links as link}
+        <a href={link.href} class:active={$page.url.pathname === link.href} aria-current={$page.url.pathname === link.href ? 'page' : undefined}>{link.label}</a>
+      {/each}
     </nav>
   </div>
 </header>
@@ -32,22 +64,20 @@
     <img src="/logo.png" srcset="/logo-200.webp 200w, /logo-300.webp 300w, /logo.png 811w" sizes="(max-width: 600px) 100px, 144px" alt="Bioinspekt" class="logo">
   </a>
 
-  <button on:click={() => menu = !menu} aria-label={menu ? 'Zatvori izbornik' : 'Otvori izbornik'} aria-expanded={menu}>
+  <button bind:this={menuButton} on:click={() => menu = !menu} on:focusout={onFocusOut} aria-label={menu ? 'Zatvori izbornik' : 'Otvori izbornik'} aria-expanded={menu} aria-controls="mobilni-izbornik">
     <img src={menu ? '/icons/close.svg' : '/icons/menu.svg'} alt="" height="40">
   </button>
 </div>
 
 {#if menu}
-  <div class="menu" in:fly="{{ y: -200, duration: 200 }}">
-    <a href="/" class:active={$page.url.pathname === '/'} on:click={() => menu = false}>Početna</a>
-    <a href="/certifikacije" class:active={$page.url.pathname === '/certifikacije'} on:click={() => menu = false}>Certifikacije</a>
-    <a href="/zakonske-regulative" class:active={$page.url.pathname === '/zakonske-regulative'} on:click={() => menu = false}>Regulative</a>
-    <a href="/obrasci" class:active={$page.url.pathname === '/obrasci'} on:click={() => menu = false}>Obrasci</a>
-    <a href="/kontakt" class:active={$page.url.pathname === '/kontakt'} on:click={() => menu = false}>Kontakt</a>
-  </div>
+  <nav id="mobilni-izbornik" class="menu" aria-label="Glavna navigacija" bind:this={menuEl} on:focusout={onFocusOut} in:fly="{{ y: -200, duration: 200 }}">
+    {#each links as link}
+      <a href={link.href} class:active={$page.url.pathname === link.href} aria-current={$page.url.pathname === link.href ? 'page' : undefined} on:click={() => closeMenu()}>{link.label}</a>
+    {/each}
+  </nav>
 {/if}
 
-<svelte:window bind:scrollY={y} />
+<svelte:window bind:scrollY={y} on:keydown={onKeydown} />
 
 <style lang="scss">
   .logo {
@@ -83,7 +113,8 @@
         display: flex;
         align-items: center;
         color: var(--primary-c);
-        opacity: .75;
+        /* .75 gave 3.73:1 on the olive bar; .9 gives 4.58:1 (WCAG 1.4.3) */
+        opacity: .9;
         font-size: 1.25rem;
         padding: 0 2rem;
         height: 100%;
@@ -97,10 +128,19 @@
           opacity: 1;
         }
 
+        &:focus-visible {
+          outline-color: var(--primary-c);
+          outline-offset: -5px;
+        }
+
         &.active {
           background-color: var(--primary-c);
           color: var(--primary);
           opacity: 1;
+
+          &:focus-visible {
+            outline-color: var(--primary);
+          }
         }
       }
     }
