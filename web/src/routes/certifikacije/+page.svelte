@@ -10,7 +10,7 @@
 <div class="grid">
   <div class="col-12">
     <a href="https://firebasestorage.googleapis.com/v0/b/jp-bioinspekt.appspot.com/o/obrasci%2FUredba%202018_848_konsolidirana%20verzija.docx?alt=media&token=4b6aaa66-d281-4518-a787-a11ef6dcf916" class="card">
-      <img src="images/eko-znak.jpeg" alt="" class="card-image">
+      <img src="images/eko-znak.jpeg" width="300" height="200" alt="" class="card-image">
 
       <span class="card-content">
         <Text size="large">Ekološka proizvodnja - Uredba (EU) 2018/848<span class="sr-only"> (preuzimanje, DOCX)</span></Text>
@@ -21,7 +21,7 @@
 
   <div class="col-12">
     <a href="/certifikacije/bio-suisse-standard" class="card">
-      <img src="images/biosuisse-organic.jpeg" alt="" class="card-image">
+      <img src="images/biosuisse-organic.jpeg" width="1081" height="550" alt="" class="card-image">
 
       <span class="card-content">
         <Text size="large">Biosuisse organic standard</Text>
@@ -32,7 +32,7 @@
 
   <div class="col-12">
     <a href="/certifikacije/dunav-soja-standard" class="card">
-      <img src="images/dunav-soja.png" alt="" class="card-image">
+      <img src="images/dunav-soja.png" width="75" height="75" alt="" class="card-image">
 
       <span class="card-content">
         <Text size="large">Dunav Soja standard</Text>
@@ -43,7 +43,7 @@
 
   <div class="col-12">
     <a href="/certifikacije/bez-gmo-standard" class="card">
-      <img src="images/bez-gmo.png" alt="" class="card-image">
+      <img src="images/bez-gmo.png" width="48" height="75" alt="" class="card-image">
 
       <span class="card-content">
         <Text size="large">BEZ GMO standard</Text>
@@ -54,7 +54,7 @@
 
   <div class="col-12">
     <a href="/certifikacije/zoi-i-zozp" class="card">
-      <img src="images/zoi-i-zozp.png" srcset="images/zoi-i-zozp.png 1x, images/zoi-i-zozp-4x.png 4x" alt="" class="card-image">
+      <img src="images/zoi-i-zozp.png" srcset="images/zoi-i-zozp.png 1x, images/zoi-i-zozp-2x.webp 2x" width="150" height="75" alt="" class="card-image">
 
       <span class="card-content">
         <Text size="large">ZOI i ZOZP</Text>
@@ -65,7 +65,7 @@
 
   <div class="col-12">
     <a href="/certifikacije/dokazana-kvaliteta-hrvatska" class="card">
-      <img src="images/dokazana-kvaliteta.jpeg" alt="" class="card-image">
+      <img src="images/dokazana-kvaliteta.jpeg" width="387" height="175" alt="" class="card-image">
 
       <span class="card-content">
         <Text size="large">Dokazana Kvaliteta Hrvatska</Text>
@@ -96,6 +96,7 @@
 
     &-image {
       height: 75px;
+      width: auto;
     }
 
     &-content {
