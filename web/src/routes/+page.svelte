@@ -41,7 +41,7 @@
 </About>
 
 <div class="certificates">
-  <TextImage src="images/eu-parlament.jpeg" inverted>
+  <TextImage src="images/eu-parlament.jpeg" srcset="images/eu-parlament-640.webp 640w, images/eu-parlament-960.webp 960w, images/eu-parlament-1024.webp 1024w" inverted>
     <Text size="huge" weight="bold" align="center">Uredba (EU) 2018/848 Europskog parlamenta i vijeća</Text>
     <Margin size="1" />
     <Text size="large" max="48" align="center">
@@ -53,7 +53,7 @@
       <Button href="https://firebasestorage.googleapis.com/v0/b/jp-bioinspekt.appspot.com/o/obrasci%2FUredba%202018_848_konsolidirana%20verzija.docx?alt=media&token=4b6aaa66-d281-4518-a787-a11ef6dcf916" width="256">Preuzmi dokumentaciju</Button>
     </div>
   </TextImage>
-  <TextImage src="images/globe.jpg">
+  <TextImage src="images/globe.jpg" srcset="images/globe-640.webp 640w, images/globe-960.webp 960w, images/globe-1280.webp 1280w, images/globe-1920.webp 1920w">
     <Text size="huge" weight="bold" align="center">Bio Suisse Standard</Text>
     <Margin size="1" />
     <Text size="large" max="64" align="center">
@@ -64,7 +64,7 @@
       <Button href="/certifikacije/bio-suisse-standard" width="256">Saznaj više</Button>
     </div>
   </TextImage>
-  <TextImage src="images/harvest.jpg" inverted>
+  <TextImage src="images/harvest.jpg" srcset="images/harvest-640.webp 640w, images/harvest-960.webp 960w, images/harvest-1280.webp 1280w, images/harvest-1920.webp 1920w" inverted>
     <Text size="huge" weight="bold" align="center">Dunav Soja Standard</Text>
     <Margin size="1" />
     <Text size="large" max="64" align="center">
@@ -75,7 +75,7 @@
       <Button href="/certifikacije/dunav-soja-standard" width="256">Saznaj više</Button>
     </div>
   </TextImage>
-  <TextImage src="images/farm.jpg">
+  <TextImage src="images/farm.jpg" srcset="images/farm-640.webp 640w, images/farm-960.webp 960w, images/farm-1280.webp 1280w, images/farm-1920.webp 1920w">
     <Text size="huge" weight="bold" align="center">BEZ GMO Standard</Text>
     <Margin size="1" />
     <Text size="large" max="64" align="center">
@@ -86,7 +86,7 @@
       <Button href="/certifikacije/bez-gmo-standard" width="256">Saznaj više</Button>
     </div>
   </TextImage>
-  <TextImage src="images/cow.jpg" inverted>
+  <TextImage src="images/cow.jpg" srcset="images/cow-640.webp 640w, images/cow-960.webp 960w, images/cow-1280.webp 1280w, images/cow-1920.webp 1920w" inverted>
     <Text size="huge" weight="bold" align="center">Certifikacija ZOI i ZOZP</Text>
     <Margin size="1" />
     <Text size="large" max="64" align="center">
@@ -97,7 +97,7 @@
       <Button href="/certifikacije/zoi-i-zozp" width="256">Saznaj više</Button>
     </div>
   </TextImage>
-  <TextImage src="images/apples.jpg">
+  <TextImage src="images/apples.jpg" srcset="images/apples-640.webp 640w, images/apples-960.webp 960w, images/apples-1280.webp 1280w, images/apples-1920.webp 1920w">
     <Text size="huge" weight="bold" align="center">Dokazana kvaliteta Hrvatska</Text>
     <Margin size="1" />
     <Text size="large" max="64" align="center">

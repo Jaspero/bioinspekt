@@ -9,8 +9,8 @@
 
 <div class="grid desktop">
   <div class="col-12 flex jc-center">
-    <a href="/">
-      <img src="/logo.png" alt="" class="logo">
+    <a href="/" aria-label="Bioinspekt - početna">
+      <img src="/logo.png" srcset="/logo-200.webp 200w, /logo-300.webp 300w, /logo.png 811w" sizes="(max-width: 600px) 100px, 144px" alt="Bioinspekt" class="logo">
     </a>
   </div>
 </div>
@@ -28,11 +28,11 @@
 </header>
 
 <div class="nav-mobile" class:shadow={y > 0}>
-  <a href="/">
-    <img src="/logo.png" alt="" class="logo">
+  <a href="/" aria-label="Bioinspekt - početna">
+    <img src="/logo.png" srcset="/logo-200.webp 200w, /logo-300.webp 300w, /logo.png 811w" sizes="(max-width: 600px) 100px, 144px" alt="Bioinspekt" class="logo">
   </a>
 
-  <button on:click={() => menu = !menu}>
+  <button on:click={() => menu = !menu} aria-label={menu ? 'Zatvori izbornik' : 'Otvori izbornik'} aria-expanded={menu}>
     <img src={menu ? '/icons/close.svg' : '/icons/menu.svg'} alt="" height="40">
   </button>
 </div>

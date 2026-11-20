@@ -3,7 +3,14 @@
 </script>
 
 <div class="hero">
-  <img src="images/hero1.jpg" alt="">
+  <img
+    src="images/hero1.jpg"
+    srcset="images/hero1-640.webp 640w, images/hero1-960.webp 960w, images/hero1-1280.webp 1280w, images/hero1-1920.webp 1920w"
+    sizes="100vw"
+    alt=""
+    fetchpriority="high"
+    decoding="async"
+  >
   <div class="grid ai-center">
     <div class="col-9 col-s-12">
       <div class="hero-topic ff-cinzel">

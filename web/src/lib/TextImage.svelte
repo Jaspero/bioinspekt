@@ -2,6 +2,8 @@
   export let inverted: boolean = false;
   export let src: string = '';
   export let alt: string = '';
+  /** Optional responsive sources, e.g. WebP variants: "images/a-640.webp 640w, ..." */
+  export let srcset: string | undefined = undefined;
 </script>
 
 <div class="container" class:inverted={inverted}>
@@ -9,7 +11,7 @@
     <slot></slot>
   </div>
   <div class="image">
-    <img {src} {alt}>
+    <img {src} {srcset} sizes="50vw" {alt} loading="lazy" decoding="async">
   </div>
 </div>
 

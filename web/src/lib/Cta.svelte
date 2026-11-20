@@ -1,6 +1,13 @@
 <div class="cta">
   <div class="image">
-    <img src="images/field.jpg" alt="polje">
+    <img
+      src="images/field.jpg"
+      srcset="images/field-640.webp 640w, images/field-960.webp 960w, images/field-1280.webp 1280w, images/field-1920.webp 1920w"
+      sizes="100vw"
+      alt="polje"
+      loading="lazy"
+      decoding="async"
+    >
   </div>
   <div class="content">
     <slot></slot>
